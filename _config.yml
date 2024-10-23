@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Mou-Jia-Le"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Jia-Le Mou"
 description              : &description "personal description"
