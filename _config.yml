@@ -21,7 +21,7 @@ repository               : "Mou-Jia-Le/Mou-Jia-Le.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "profile.png"
   name             : "Jia-Le Mou 牟嘉乐"
   pronouns         : # example: "she/her"  
   bio              : "A geochemist and petrologist"
