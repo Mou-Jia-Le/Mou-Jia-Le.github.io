@@ -9,10 +9,10 @@ main:
     url: /research/
 
   - title: "CV"
-    url: /CV/    
+    url: /cv/    
 
   - title: "Gallery"
     url: /gallery/    
     
   - title: "About me"
-    url: /aboutme/
+    url: /about/
