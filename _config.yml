@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
 title                    : "Jia-Le Mou"
 title_separator          : "-"
-name                     : &name "Jia-Le Mou 牟嘉乐"
+name                     : &name "Home"
 description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://academicpages.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
@@ -24,10 +24,10 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Home"
+  name             : "Jia-Le Mou"
   pronouns         : # example: "she/her"  
   bio              : "A geochemist and petrologist"
-  location         : "Earth"
+  location         : "Houston, TX"
   employer         : "Rice University"
   uri              : # URL
   email            : "jm163@rice.edu" 
@@ -63,7 +63,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "https://www.linkedin.com/in/jiale-mou-aa77972b1/"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
