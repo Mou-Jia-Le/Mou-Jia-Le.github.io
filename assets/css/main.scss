@@ -39,3 +39,14 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+
+/* --- Custom name sizing in masthead --- */
+.masthead .site-title {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .35rem;
+  text-decoration: none;
+}
+.masthead .name-en { font-size: 2.2rem; font-weight: 700; letter-spacing: .5px; }
+.masthead .name-cn { font-size: 1.2rem; font-weight: 400; color: #555; }
