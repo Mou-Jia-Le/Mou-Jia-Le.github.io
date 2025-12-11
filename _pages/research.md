@@ -15,16 +15,11 @@ custom_css: research
       <img src="{{ '/images/research/research1.jpg' | relative_url }}" alt="Research Topic 1">
     </div>
     <div class="research-text">
-      <h2>1. Mantle melting and thermal evolution</h2>
+      <h2>1. Mantle melting and thermal evolution of Earth</h2>
       <p>
-      I investigate how mantle peridotites record melt extraction through time, using olivine forsterite (Fo) content,
-      Re-Os depletion ages, and whole-rock major-element systematics. By combining global xenolith datasets with
-      thermodynamic modeling, I reconstruct secular changes in mantle potential temperature and test when modern-style
-      plate tectonics began.
+      Understanding how Earth's mantle cooled over geological time is central to our knowledge of plate tectonics and habitability. Mantle peridotites preserve records of past melt extraction through olivine forsterite content, Re-Os depletion ages, and whole-rock major-element systematics.By compiling a global dataset of xenoliths and applying thermodynamic modeling, I reconstruct secular changes in mantle potential temperature. My results reveal a stepwise cooling history with a clear transition marking the onset of modern-style subduction, showing when Earth began efficiently recycling heat through plate tectonics.
       </p>
       <p>
-      This work addresses a fundamental question: when did Earth start efficiently cooling via subduction-driven
-      recycling, and how did that transition affect long-term habitability?
       </p>
     </div>
   </div>
@@ -35,15 +30,11 @@ custom_css: research
       <img src="{{ '/images/research/research2.jpg' | relative_url }}" alt="Research Topic 2">
     </div>
     <div class="research-text">
-      <h2>2. Sulfide transport and ore formation in magma systems</h2>
+      <h2>2. Crustal heating and redistribution of radioactive elements</h2>
       <p>
-      I model the motion of immiscible sulfide droplets through crystal-rich magmatic mush (Bushveld-style layered
-      intrusions and komatiitic conduits). Using multiphase flow simulations, I explore how physical segregation,
-      permeability, and dihedral angles control the focusing of platinum-group-element (PGE)–rich sulfides into
-      ore-grade horizons.
+      The thermal structure of Earth’s crust is strongly influenced by the distribution of heat-producing elements such as uranium, thorium, and potassium. During crustal differentiation, these elements become concentrated in the upper crust while the lower crust becomes depleted, producing a stratified concentration profile. Understanding how crustal thickness, magmatic processes, and tectonic setting control this redistribution is key to understand the thermal regime of crust. I combine geochemical datasets with numerical modeling to examine how variations in heat-producing element distribution affect crustal thermal gradients, melting behavior, and lithospheric stability. This work provides insight into the feedbacks between heat production, crustal structure, and tectonic processes, helping to explain why some continental regions remain stable over geological time.
       </p>
       <p>
-      Understanding this filtering process links micro-scale melt connectivity to economic metal deposits.
       </p>
     </div>
   </div>
@@ -54,15 +45,11 @@ custom_css: research
       <img src="{{ '/images/research/research2.jpg' | relative_url }}" alt="Research Topic 3">
     </div>
     <div class="research-text">
-      <h2>3. Planet formation and early Earth analogs</h2>
+      <h2>Two-phase flow modeling of sulfide migration in crystal-rich mushes</h2>
       <p>
-      I build dynamical models of planetary embryos growing in a gaseous protoplanetary disk through pebble accretion,
-      gravitational scattering, and late giant impacts. The goal is to understand why our Solar System avoided forming
-      a close-in chain of super-Earths, unlike most observed exoplanetary systems.
+      Magmatic sulfide liquids segregate through crystal-rich mushes to form economically significant ore deposits, but the mechanisms controlling their migration remain poorly understood. I use two-phase flow simulations on structured and unstructured meshes to model the motion of sulfide droplets through partially molten systems. These simulations examine how factors such as sulfide fraction, dihedral angle, crystal framework, and mush compaction influence the focusing and transport of sulfide liquids. By linking micro-scale fluid dynamics to ore-forming processes, this research provides a mechanistic understanding of how platinum-group element–rich sulfides are concentrated in layered intrusions and komatiitic conduits, bridging petrology, geochemistry, and resource geology.
       </p>
       <p>
-      Connecting early planetary assembly to present-day geochemical signatures helps us test how “Earth-like” other
-      rocky worlds may actually be.
       </p>
     </div>
   </div>
