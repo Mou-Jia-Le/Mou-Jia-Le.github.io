@@ -27,15 +27,16 @@ author:
   email            : "jm163@rice.edu" 
 
   # Academic websites
-  googlescholar    : "https://scholar.google.com/citations?user=YbDFyNYAAAAJ&hl=en"
-  orcid            : "https://orcid.org/my-orcid?orcid=0009-0001-2709-3580"
-  researchgate     : “https://www.researchgate.net/profile/Jiale-Mou”
+  googlescholar: "https://scholar.google.com/citations?user=YbDFyNYAAAAJ&hl=en"
+  orcid: "https://orcid.org/0009-0001-2709-3580"
+  researchgate: "https://www.researchgate.net/profile/Jiale-Mou"
 
   # Repositories and software development
-  github           : "https://github.com/Mou-Jia-Le"
+  github: "https://github.com/Mou-Jia-Le"
 
   # Social media
-  linkedin         : "https://www.linkedin.com/in/jiale-mou-aa77972b1/"
+  linkedin: "https://www.linkedin.com/in/jiale-mou-aa77972b1/"
+
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
