@@ -8,10 +8,9 @@ redirect_from:
 ---
 
 {% include base_path %}
-# Jiale Mou 牟嘉乐
-Rice University, Houston, TX, USA  
-Email: [moujiale@rice.edu](mailto:moujiale@rice.edu)  
-[Download CV PDF](assets/CV/CV——Jia-Le Mou.pdf){:target="_blank"}
+
+# [CV – Jia-Le Mou](assets/CV/CV——Jia-Le Mou.pdf){:target="_blank"}
+
 
 Education
 ======
