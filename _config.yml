@@ -2,7 +2,7 @@
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
 title_en                 : "JIA-LE MOU"
-title_cn                 : "牟嘉乐"
+title_cn                 : ""
 
 title_separator          : "-"
 name                     : &name "Jia-Le Mou"
@@ -20,7 +20,7 @@ author:
   avatar           : "profile.png"
   name             : "Jia-Le Mou 牟嘉乐"
   pronouns         : # example: "she/her"  
-  bio              : "A geochemist and petrologist"
+  bio              : "A geochemist, petrologist, and geodynamicist studying Earth’s mantle, crustal evolution, and thermal history"
   location         : "Houston, TX"
   employer         : "Rice University"
   uri              : # URL
