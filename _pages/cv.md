@@ -19,4 +19,4 @@ redirect_from:
 3. Mou, J.-L., Lee, C.-T., & Zhang, J. Crustal thickness effects on the distribution of heat-producing elements and implications for craton stability. Manuscript in preparation.
 
 
-# [Download CV_Jia-Le Mou](assets/CV/CV——Jia-Le Mou.pdf){:target="_blank"}
+## [Download CV_Jia-Le Mou](assets/CV/CV_Jia-Le Mou.pdf){:target="_blank"}
