@@ -12,7 +12,7 @@ custom_css: research
   <!-- Section 1 -->
   <div class="research-block research-left">
     <div class="research-img">
-      <img src="/images/research/Figure_thermal_history1.png" alt="Research Topic 1">
+      <img src="/images/research/Figure_thermal_history.png" alt="Research Topic 1">
     </div>
     <div class="research-text">
       <h2>1. Mantle melting and thermal evolution of Earth</h2>
