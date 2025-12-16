@@ -8,10 +8,10 @@ custom_css: gallery
 
 <div class="gallery-section">
 
-  
+  <!-- Gallery Item 1 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="/images/gallery/DSG01865.JPG">
+      <img src="images/gallery/DSG01865.JPG" alt="Gallery Item 2">
     </div>
     <div class="gallery-text">
       <p>
