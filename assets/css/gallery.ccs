@@ -1,32 +1,14 @@
-/* gallery-section 包裹所有条目 */
 .gallery-section {
   display: flex;
   flex-direction: column;
-  gap: 3rem; /* 每个条目间距 */
+  gap: 2rem; /* 每个 gallery-block 之间的垂直间距 */
 }
 
-/* 每个 gallery block */
 .gallery-block {
   display: flex;
-  flex-wrap: wrap; /* 保证响应式 */
+  flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
-}
-
-/* 左图右文 */
-.gallery-left .gallery-img {
-  order: 0;
-}
-.gallery-left .gallery-text {
-  order: 1;
-}
-
-/* 右图左文 */
-.gallery-right .gallery-img {
-  order: 1;
-}
-.gallery-right .gallery-text {
-  order: 0;
+  gap: 1.5rem; /* 图片和文字之间的水平间距 */
 }
 
 /* 图片样式 */
@@ -37,12 +19,6 @@
   border-radius: 8px;
 }
 
-/* 文字样式 */
-.gallery-text {
-  flex: 1;
-  min-width: 250px; /* 防止文字太窄 */
-}
-
 /* 响应式：屏幕小于768px时，图在上文字在下 */
 @media (max-width: 768px) {
   .gallery-block {
@@ -50,9 +26,7 @@
   }
 
   .gallery-left .gallery-img,
-  .gallery-left .gallery-text,
-  .gallery-right .gallery-img,
-  .gallery-right .gallery-text {
-    order: 0; /* 重置顺序 */
+  .gallery-right .gallery-img {
+    order: 0;
   }
 }
