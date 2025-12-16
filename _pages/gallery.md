@@ -11,7 +11,7 @@ custom_css: gallery
   <!-- Gallery Item 1 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="images/gallery/DSC01865.JPG" alt="Gallery Item 1">
+      <img src="/images/gallery/DSC01865.JPG" alt="Gallery Item 1">
     </div>
     <div class="gallery-text">
     </div>
