@@ -11,11 +11,12 @@ custom_css: gallery
   <!-- Gallery Item 1 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="images/gallery/DSG01865.JPG" alt="Gallery Item 2">
+      <img src="images/gallery/DSG01865.JPG" alt="Gallery Item 1">
     </div>
     <div class="gallery-text">
       <p>
-        Description for Gallery Item 1.
+
+       
       </p>
     </div>
   </div>
@@ -27,7 +28,8 @@ custom_css: gallery
     </div>
     <div class="gallery-text">
       <p>
-        Description for Gallery Item 2.
+
+       
       </p>
     </div>
   </div>
@@ -39,7 +41,8 @@ custom_css: gallery
     </div>
     <div class="gallery-text">
       <p>
-        Description for Gallery Item 3.
+
+       
       </p>
     </div>
   </div>
@@ -51,7 +54,8 @@ custom_css: gallery
     </div>
     <div class="gallery-text">
       <p>
-        Description for Gallery Item 3.
+
+       
       </p>
     </div>
   </div>
@@ -63,7 +67,8 @@ custom_css: gallery
     </div>
     <div class="gallery-text">
       <p>
-        Description for Gallery Item 3.
+
+        
       </p>
     </div>
   </div>
@@ -76,7 +81,8 @@ custom_css: gallery
     </div>
     <div class="gallery-text">
       <p>
-        Description for Gallery Item 3.
+
+       
       </p>
     </div>
   </div>
@@ -88,7 +94,8 @@ custom_css: gallery
     </div>
     <div class="gallery-text">
       <p>
-        Description for Gallery Item 3.
+
+        
       </p>
     </div>
   </div>
@@ -100,7 +107,8 @@ custom_css: gallery
     </div>
     <div class="gallery-text">
       <p>
-        Description for Gallery Item 3.
+
+        
       </p>
     </div>
   </div>
@@ -111,7 +119,8 @@ custom_css: gallery
     </div>
     <div class="gallery-text">
       <p>
-        Description for Gallery Item 3.
+
+        
       </p>
     </div>
   </div>
@@ -123,7 +132,8 @@ custom_css: gallery
     </div>
     <div class="gallery-text">
       <p>
-        Description for Gallery Item 3.
+
+        
       </p>
     </div>
   </div>
