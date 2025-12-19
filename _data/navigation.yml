@@ -5,15 +5,15 @@
 # prevent it from being included in the site.
 
 main:
-    title: "Home"
-    url: /CV/
-    
+  - title: "Home"
+    url: /
+
   - title: "CV"
     url: /CV/
 
   - title: "Research"
     url: /research/
-   
+
   - title: "Gallery"
-    url: /gallery/    
+    url: /gallery/
     
