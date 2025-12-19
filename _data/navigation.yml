@@ -10,7 +10,13 @@ main:
     
   - title: "Research"
     url: /research/
+
+  - title: "CV"
+    url: /CV/
    
 
   - title: "Gallery"
     url: /gallery/    
+    
+  - title: "About me"
+    url: /about/
