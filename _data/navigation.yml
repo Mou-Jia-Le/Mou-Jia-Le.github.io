@@ -8,13 +8,12 @@ main:
     title: "Home"
     url: /CV/
     
-  - title: "Research"
-    url: /research/
-
   - title: "CV"
     url: /CV/
-   
 
+  - title: "Research"
+    url: /research/
+   
   - title: "Gallery"
     url: /gallery/    
     
