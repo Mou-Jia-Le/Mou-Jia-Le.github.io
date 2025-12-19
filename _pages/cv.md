@@ -17,12 +17,6 @@ I am currently seeking postdoctoral positions in geochemistry and geodynamics, w
 </strong>
 </p>
 
-</strong>
-</p>
-
-Outside of research, I enjoy hiking as a way to stay connected to natural landscapes, and I regularly play badminton and football, which help me maintain balance and focus alongside academic work
-
-
 ## Education
 - **Ph.D in Geology**, Rice University, 2026 (expected)  
 - **B.S. in Geochemistry**, University of Science and Technology of China, 2022  
