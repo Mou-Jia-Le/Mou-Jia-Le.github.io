@@ -17,7 +17,7 @@ custom_css: research
     <div class="research-text">
       <h2>1. Mantle melting and thermal evolution of Earth</h2>
       <p>
-      Understanding how Earth's mantle cooled over geological time is central to our knowledge of plate tectonics and habitability. Mantle peridotites preserve records of past melt extraction through olivine forsterite content, Re-Os depletion ages, and whole-rock major-element systematics.By compiling a global dataset of xenoliths and applying thermodynamic modeling, I reconstruct secular changes in mantle potential temperature. My results reveal a stepwise cooling history with a clear transition marking the onset of modern-style subduction, showing when Earth began efficiently recycling heat through plate tectonics.
+      Understanding how Earth's mantle cooled over geological time is central to our knowledge of plate tectonics and habitability. Mantle peridotites preserve records of past melt extraction through olivine forsterite content, Re-Os depletion ages, and whole-rock major-element systematics.By compiling a global dataset of xenoliths and applying thermodynamic modeling, I reconstruct secular changes in mantle potential temperature. My results reveal a stepwise cooling history with a clear transition marking the onset of modern-style subduction, showing when Earth began efficiently releasing heat through plate tectonics.
       </p>
       <p>
       </p>
@@ -48,7 +48,7 @@ custom_css: research
     <div class="research-text">
       <h2>Two-phase flow modeling of sulfide migration in crystal-rich mushes</h2>
       <p>
-      Magmatic sulfide liquids segregate through crystal-rich mushes to form economically significant ore deposits, but the mechanisms controlling their migration remain poorly understood. I use two-phase flow simulations on structured and unstructured meshes to model the motion of sulfide droplets through partially molten systems. These simulations examine how factors such as sulfide fraction, dihedral angle, crystal framework, and mush compaction influence the focusing and transport of sulfide liquids. By linking micro-scale fluid dynamics to ore-forming processes, this research provides a mechanistic understanding of how platinum-group element–rich sulfides are concentrated in layered intrusions and komatiitic conduits, bridging petrology, geochemistry, and resource geology.
+      Magmatic sulfide liquids segregate through crystal-rich mushes to form economically significant ore deposits, but the mechanisms controlling their migration remain poorly understood. I use two-phase flow simulations on crytsall meshes to model the motion of sulfide droplets through partially molten systems. These simulations examine how factors such as sulfide fraction, crystal framework, and mush compaction influence the focusing and transport of sulfide liquids. By linking micro-scale fluid dynamics to ore-forming processes, this research provides a mechanistic understanding of how platinum-group element–rich sulfides are concentrated in layered intrusions and komatiitic conduits.
       </p>
       <p>
       </p>
