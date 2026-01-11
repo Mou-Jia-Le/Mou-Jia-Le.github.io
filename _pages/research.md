@@ -48,7 +48,7 @@ custom_css: research
     <div class="research-text">
       <h2>Two-phase flow modeling of sulfide migration in crystal-rich mushes</h2>
       <p>
-      Magmatic sulfide liquids segregate through crystal-rich mushes to form economically significant ore deposits, but the mechanisms controlling their migration remain poorly understood. I use two-phase flow simulations on crytsall meshes to model the motion of sulfide droplets through partially molten systems. These simulations examine how factors such as sulfide fraction, crystal framework, and mush compaction influence the focusing and transport of sulfide liquids. By linking micro-scale fluid dynamics to ore-forming processes, this research provides a mechanistic understanding of how platinum-group element–rich sulfides are concentrated in layered intrusions and komatiitic conduits.
+      Magmatic sulfide liquids segregate through crystal-rich mushes to form economically significant ore deposits, but the mechanisms controlling their migration remain poorly understood. I use two-phase flow simulations to model the motion of sulfide droplets through partially molten systems. These simulations examine how factors such as sulfide fraction, crystal framework, and mush compaction influence the focusing and transport of sulfide liquids. By linking micro-scale fluid dynamics to ore-forming processes, this research provides a mechanistic understanding of how platinum-group element–rich sulfides are concentrated in layered intrusions and komatiitic conduits.
       </p>
       <p>
       </p>
