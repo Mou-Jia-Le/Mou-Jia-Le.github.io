@@ -8,6 +8,16 @@ custom_css: gallery
 
 <div class="gallery-section">
 
+  <!-- Gallery Item 3 -->
+  <div class="gallery-block gallery-left">
+    <div class="gallery-img">
+      <img src="/images/gallery/DSC06823.JPG" alt="Gallery Item 3">
+    </div>
+    <div class="gallery-text">
+      Columnar Jointing exposed on the inner walls of the caldera from the <strong>Cleetwood Cove Trail, Crater Lake National Park</strong>strong>. These hexagonal pillars were formed by the cooling of thick lava flows from the ancient Mount Mazama.
+    </div>
+  </div>
+
   <!-- Gallery Item 1 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
@@ -53,16 +63,6 @@ custom_css: gallery
     </div>
   </div>
 </div>
-
-<!-- Gallery Item 3 -->
-  <div class="gallery-block gallery-left">
-    <div class="gallery-img">
-      <img src="/images/gallery/DSC06823.JPG" alt="Gallery Item 3">
-    </div>
-    <div class="gallery-text">
-      Columnar Jointing exposed on the inner walls of the caldera from the <strong>cleetwood cove trail, Crater Lake National Park<strong>. These hexagonal pillars were formed by the cooling of thick lava flows from the ancient Mount Mazama.
-    </div>
-  </div>
 
   <!-- Gallery Item 3 -->
   <div class="gallery-block gallery-left">
