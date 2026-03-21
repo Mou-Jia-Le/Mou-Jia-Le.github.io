@@ -1,6 +1,7 @@
 ---
 layout: archive
-title: ""
+title: "Jia-Le Mou (牟嘉乐) | Geochemist & Geodynamicist | Rice University"
+excerpt: "Jia-Le Mou's personal website. Geochemist studying the thermal and chemical evolution of Earth’s interior at Rice University."
 author_profile: true
 ---
 
