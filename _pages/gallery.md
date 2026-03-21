@@ -11,7 +11,7 @@ custom_css: gallery
   <!-- Gallery Item 1 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="/images/gallery/DSC06872.webp" alt="Gallery Item 1">
+      <img src="/images/gallery/1craterlake.webp" alt="Gallery Item 1">
     </div>
     <div class="gallery-text">
 Crater Lake’s crystal-clear waters, viewed from the caldera floor. As the deepest lake in the USA, this majestic caldera was formed approximately 7,700 years ago by the collapse of Mount Mazama after its massive eruption emptied the magma chamber. 
@@ -23,7 +23,7 @@ Crater Lake’s crystal-clear waters, viewed from the caldera floor. As the deep
   <!-- Gallery Item 2 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="/images/gallery/DSC06823.webp" alt="Gallery Item 2">
+      <img src="/images/gallery/2craterlake.webp" alt="Gallery Item 2">
     </div>
     <div class="gallery-text">
 Columnar Jointing exposed on the inner walls of the caldera from the Cleetwood Cove Trail, Crater Lake National Park. These hexagonal pillars were formed by the cooling of thick lava flows from the ancient Mount Mazama.
@@ -35,7 +35,7 @@ Columnar Jointing exposed on the inner walls of the caldera from the Cleetwood C
   <!-- Gallery Item 4 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="/images/gallery/DSC03274.webp" alt="Gallery Item 4">
+      <img src="/images/gallery/3yellowstone.webp" alt="Gallery Item 4">
     </div>
     <div class="gallery-text">
 Dawn mist over Henry’s Fork, looking east toward the active Yellowstone Hotspot. We are standing within the Island Park Caldera, a part of the eastern Snake River Plain, which marks where the North American Plate drifted over a stationary mantle plume, leaving a trail of volcanic collapse. 
@@ -46,7 +46,7 @@ Dawn mist over Henry’s Fork, looking east toward the active Yellowstone Hotspo
 <!-- Gallery Item 5 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="/images/gallery/DSC07021.webp" alt="Gallery Item 5">
+      <img src="/images/gallery/4southsister.webp" alt="Gallery Item 5">
     </div>
     <div class="gallery-text">
 Vesicular Obsidian at Big Obsidian Flow, Newberry National Volcanic Monument (~1,300 ya).
@@ -58,20 +58,80 @@ This high-silica rhyolitic glass was formed through rapid quenching and extreme 
 <!-- Gallery Item 6 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="/images/gallery/DSC07154.webp" alt="Gallery Item 6">
+      <img src="/images/gallery/5southsister.webp" alt="Gallery Item 6">
     </div>
     <div class="gallery-text">
 A massive block of flow-banded rhyolitic lava at the foot of South Sister. The intense, crumpling texture records the extreme viscosity of this high-silica melt as it struggled to move, buckling its own cooled skin into permanent, elegant folds. As a prominent stratovolcano within the Cascade Range, South Sister is fueled by the Cascadia Subduction Zone. Unlike the fluid basaltic flows of shield volcanoes, the andesitic and rhyolitic lavas here possess much higher viscosities, leading to the steep profiles and explosive history characteristic of this volcanic arc.
     </div>
   </div>
 
-
-  <!-- Gallery Item 3 -->
+<!-- Gallery Item 6 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="/images/gallery/DSC02405.webp" alt="Gallery Item 3">
+      <img src="/images/gallery/6shiprock.webp" alt="Gallery Item 6">
+    </div>
+    <div class="gallery-text">
+Shiprock (Tsé Bitʼaʼí) in the mist of the Navajo desert. It is a classic volcanic plug composed of minette, a magnesium-rich potassic rock. Formed approximately 30 million years ago, the central spire is the solidified throat of an ancient volcano, while the linear radiating dikes stretching across the plain represent magma that cooled within vertical fissures. These erosion-resistant walls resemble the wake of a ship or the jagged spine of a dragon, standing in stark relief against the weathered Mancos Shale.
+    </div>
+  </div>
+
+<!-- Gallery Item 7 -->
+  <div class="gallery-block gallery-left">
+    <div class="gallery-img">
+      <img src="/images/gallery/7keketuohai.webp" alt="Gallery Item 7">
+    </div>
+    <div class="gallery-text">
+The aquamarine-blue lake at the bottom of the Koktokay No. 3 pit. Renowned for its nine concentric mineral zones, this massive ore body crystallized from a granitic margin to a quartz-rich center. High concentrations of volatiles (water, fluorine, and boron) reduced magma viscosity, allowing ions to diffuse rapidly and grow giant crystals several meters in length. This unique environment makes Koktokay No. 3 a dual treasure: a strategic stronghold for Lithium, Beryllium, and Tantalum, and a legendary cradle for world-class gemstones like aquamarine, tourmaline, and kunzite.
+    </div>
+  </div>
+
+<!-- Gallery Item 8 -->
+  <div class="gallery-block gallery-left">
+    <div class="gallery-img">
+      <img src="/images/gallery/8bigbend.webp" alt="Gallery Item 8">
+    </div>
+    <div class="gallery-text">
+Standing atop Emory Peak, the highest point of Big Bend National Park. This summit is a massive erosional remnant of Oligocene volcanism, primarily composed of South Rim Formation rhyolite. Geochemically, these are A-type (anorogenic) volcanic rocks, characterized by high silica and alkali content. This magmatism was triggered by post-Laramide lithospheric extension in the Trans-Pecos province, reflecting the tectonic transition from compression to the crustal thinning that shaped the modern Basin and Range.
+    </div>
+  </div>
+
+<!-- Gallery Item 9 -->
+  <div class="gallery-block gallery-left">
+    <div class="gallery-img">
+      <img src="/images/gallery/9bigbend.webp" alt="Gallery Item 9">
+    </div>
+    <div class="gallery-text">
+Watching a rider along the Rio Grande at Big Bend National Park. The river is a natural international border between the United States and Mexico. Its course was fundamentally established along the Rio Grande Rift (graben), a tectonic trench created as the Earth’s crust stretched and fractured during the Basin and Range extension. While the river followed the topographic lows of the rift, the resistant Oligocene volcanism of the Chisos Mountains served as a massive igneous barrier. This geological obstacle redirected the water’s flow, forcing the river to skirt the mountain block and forming the dramatic "U-turn" of the Big Bend.
+    </div>
+  </div>
+
+<!-- Gallery Item 10 -->
+  <div class="gallery-block gallery-left">
+    <div class="gallery-img">
+      <img src="/images/gallery/10rockymountain.webp" alt="Gallery Item 10">
+    </div>
+    <div class="gallery-text">
+Dream Lake, situated below Hallett Peak in Rocky Mountain National Park. The steep, vertical face of the peak is composed of resistant granitic and metamorphic rocks. This rugged topography was sculpted by the Tyndall Glacier, which carved the deep, U-shaped profile of the gorge and left behind this crystalline paternoster lake within a glacial cirque.
+    </div>
+  </div>
+
+
+<!-- Gallery Item 11 -->
+  <div class="gallery-block gallery-left">
+    <div class="gallery-img">
+      <img src="/images/gallery/11redrock.webp" alt="Gallery Item 11">
     </div>
     <div class="gallery-text">
 Fountain Formation exposures at Red Rock Canyon, deposited during the Pennsylvanian subperiod (~300 Mya). During the Laramide Orogeny (~70 Mya), intense tectonic compression upended these horizontal strata into their current near-vertical orientation. The site preserves the remnants of Kenmuir Quarry, whose red sandstone defines the historic architecture of Colorado Springs and Denver.
+    </div>
+  </div>
+
+<!-- Gallery Item 12 -->
+  <div class="gallery-block gallery-left">
+    <div class="gallery-img">
+      <img src="/images/gallery/12redrock.webp" alt="Gallery Item 12">
+    </div>
+    <div class="gallery-text">
+The fractured coastline of Acadia National Park. The dominant Cadillac Mountain granite crystallized approximately 420 million years ago, fueled by crustal melting during the Acadian orogeny's arc-continent collision. Subsequent post-collisional extension caused the granite to fracture, allowing younger, dark basaltic magma to rise and intrude into these fissures. This sequence created the prominent mafic dikes seen today, which have been further exposed and shaped by differential marine erosion and Pleistocene glaciation.
     </div>
   </div>
