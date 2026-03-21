@@ -20,16 +20,16 @@ Crater Lake’s crystal-clear waters, viewed from the caldera floor. As the deep
   </div>
 
 
-  
-  <!-- Gallery Item 3 -->
+  <!-- Gallery Item 2 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="/images/gallery/DSC02405.webp" alt="Gallery Item 3">
+      <img src="/images/gallery/DSC06823.webp" alt="Gallery Item 2">
     </div>
     <div class="gallery-text">
-Fountain Formation exposures at Red Rock Canyon, deposited during the Pennsylvanian subperiod (~300 Mya). During the Laramide Orogeny (~70 Mya), intense tectonic compression upended these horizontal strata into their current near-vertical orientation. The site preserves the remnants of Kenmuir Quarry, whose red sandstone defines the historic architecture of Colorado Springs and Denver.
+Columnar Jointing exposed on the inner walls of the caldera from the Cleetwood Cove Trail, Crater Lake National Park. These hexagonal pillars were formed by the cooling of thick lava flows from the ancient Mount Mazama.
     </div>
   </div>
+
 
 
   <!-- Gallery Item 4 -->
@@ -65,12 +65,13 @@ A massive block of flow-banded rhyolitic lava at the foot of South Sister. The i
     </div>
   </div>
 
-  <!-- Gallery Item 2 -->
+
+  <!-- Gallery Item 3 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="/images/gallery/DSC06823.webp" alt="Gallery Item 2">
+      <img src="/images/gallery/DSC02405.webp" alt="Gallery Item 3">
     </div>
     <div class="gallery-text">
-Columnar Jointing exposed on the inner walls of the caldera from the Cleetwood Cove Trail, Crater Lake National Park. These hexagonal pillars were formed by the cooling of thick lava flows from the ancient Mount Mazama.
+Fountain Formation exposures at Red Rock Canyon, deposited during the Pennsylvanian subperiod (~300 Mya). During the Laramide Orogeny (~70 Mya), intense tectonic compression upended these horizontal strata into their current near-vertical orientation. The site preserves the remnants of Kenmuir Quarry, whose red sandstone defines the historic architecture of Colorado Springs and Denver.
     </div>
   </div>
