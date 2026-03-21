@@ -6,7 +6,6 @@ author_profile: true
 ---
 
 {% include base_path %}
-# Jia-Le Mou (牟嘉乐)
 I am a geochemist, igneous petrologist and geodynamicist studying the thermal and chemical evolution of Earth’s interior. My work integrates geochemical analysis with physical models of mantle and lithospheric processes to understand long-term changes in Earth’s tectonic and thermal state. Please refer to the [Research](/research/) page for a detailed overview of my work.
 
 <p style="background-color: #fff3b0; padding: 6px 8px; display: inline-block; border-radius: 4px;">
