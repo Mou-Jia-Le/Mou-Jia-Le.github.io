@@ -129,7 +129,7 @@ Fountain Formation exposures at Red Rock Canyon, deposited during the Pennsylvan
 <!-- Gallery Item 12 -->
   <div class="gallery-block gallery-left">
     <div class="gallery-img">
-      <img src="/images/gallery/12redrock.webp" alt="Gallery Item 12">
+      <img src="/images/gallery/12acadia.webp" alt="Gallery Item 12">
     </div>
     <div class="gallery-text">
 The fractured coastline of Acadia National Park. The dominant Cadillac Mountain granite crystallized approximately 420 million years ago, fueled by crustal melting during the Acadian orogeny's arc-continent collision. Subsequent post-collisional extension caused the granite to fracture, allowing younger, dark basaltic magma to rise and intrude into these fissures. This sequence created the prominent mafic dikes seen today, which have been further exposed and shaped by differential marine erosion and Pleistocene glaciation.

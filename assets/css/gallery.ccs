@@ -1,28 +1,26 @@
-/* --- Gallery Section 容器样式 --- */
+/* --- Gallery Section --- */
 .gallery-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 6rem; /* 每个模块之间保持较大的呼吸感 */
-}
+  gap: 6rem; }
 
-/* --- 基础 Block 布局 --- */
+
 .gallery-block {
   display: flex;
   flex-wrap: wrap;
-  align-items: center; /* 垂直居中对齐 */
-  gap: 4%; /* 图片和文字之间的百分比间距 */
+  align-items: center; 
+  gap: 4%; 
   width: 100%;
 }
 
-/* --- 核心逻辑：交替往复排列 --- */
+
 .gallery-block:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-/* --- 图片容器 (占 60%) --- */
 .gallery-img {
   flex: 0 0 60%;
   max-width: 60%;
@@ -37,55 +35,50 @@
   transition: transform 0.3s ease;
 }
 
-/* 悬停小效果 */
 .gallery-img img:hover {
   transform: scale(1.02);
 }
 
-/* --- 文字容器 (占约 36%, 剩余空间) --- */
-.gallery-caption {
+.gallery-text {
   flex: 1;
   padding: 0 1rem;
 }
 
-.gallery-caption h3 {
+.gallery-text h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #333;
 }
 
-.gallery-caption p {
+.gallery-text p {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #666;
 }
 
-/* --- 进阶细节：偶数行文字对齐优化 --- */
-.gallery-block:nth-child(even) .gallery-caption {
+.gallery-block:nth-child(even) .gallery-text {
   text-align: right;
 }
 
-/* --- 响应式适配 (手机端) --- */
 @media (max-width: 768px) {
   .gallery-section {
-    gap: 3rem; /* 缩小手机端间距 */
+    gap: 3rem; 
     padding: 2rem 1rem;
   }
 
   .gallery-block, 
   .gallery-block:nth-child(even) {
-    flex-direction: column !important; /* 强制统一为：图在上，文在下 */
-    text-align: left !important; /* 恢复左对齐 */
+    flex-direction: column !important; 
+    text-align: left !important; 
   }
 
   .gallery-img, 
-  .gallery-caption {
+  .gallery-text {
     flex: 0 0 100%;
     max-width: 100%;
     padding: 0;
   }
   
-  .gallery-caption {
-    margin-top: 1.5rem; /* 手机端给图片下方留点空隙 */
-  }
+  .gallery-text {
+    margin-top: 1.5rem;   }
 }
