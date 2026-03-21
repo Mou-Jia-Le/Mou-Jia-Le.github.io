@@ -20,16 +20,6 @@ Crater Lake’s crystal-clear waters, viewed from the caldera floor. As the deep
   </div>
 
 
-  <!-- Gallery Item 2 -->
-  <div class="gallery-block gallery-left">
-    <div class="gallery-img">
-      <img src="/images/gallery/DSC06823.webP" alt="Gallery Item 2">
-    </div>
-    <div class="gallery-text">
-Columnar Jointing exposed on the inner walls of the caldera from the Cleetwood Cove Trail, Crater Lake National Park. These hexagonal pillars were formed by the cooling of thick lava flows from the ancient Mount Mazama.
-    </div>
-  </div>
-
   
   <!-- Gallery Item 3 -->
   <div class="gallery-block gallery-left">
@@ -75,4 +65,12 @@ A massive block of flow-banded rhyolitic lava at the foot of South Sister. The i
     </div>
   </div>
 
-
+  <!-- Gallery Item 2 -->
+  <div class="gallery-block gallery-left">
+    <div class="gallery-img">
+      <img src="/images/gallery/DSC06823.webp" alt="Gallery Item 2">
+    </div>
+    <div class="gallery-text">
+Columnar Jointing exposed on the inner walls of the caldera from the Cleetwood Cove Trail, Crater Lake National Park. These hexagonal pillars were formed by the cooling of thick lava flows from the ancient Mount Mazama.
+    </div>
+  </div>
