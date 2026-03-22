@@ -443,8 +443,15 @@
     padding: 0.2rem !important;
     margin: 0 !important;
   }
+
   .greedy-nav button {
     display: none !important;
 
   }
+
+  .author__urls-wrapper .btn--inverse {
+
+    display: none !important;
+
+}
 }
