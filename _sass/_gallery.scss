@@ -174,11 +174,72 @@
 .prev-btn { left: 10px !important; }
 .next-btn { right: 10px !important; }
 
-/* --- 8. 手机端适配 --- */
-@media (max-width: 900px) {
-  .photo-wall { grid-template-columns: repeat(3, 1fr) !important; }
-  .nav-btn, .caption-trigger { display: none !important; }
-  .lightbox-content { flex-direction: column !important; height: auto !important; max-height: 90vh !important; }
-  .lightbox-image-container { width: 100% !important; height: 50vh !important; }
-  .lightbox-caption { width: 100% !important; opacity: 1 !important; padding: 20px !important; display: block !important; }
+/* --- 8. 手机端适配 (合并优化版) --- */
+@media (max-width: 768px) {
+  .photo-wall { 
+    grid-template-columns: repeat(3, 1fr) !important; // 手机端两列更清晰
+    gap: 10px; 
+  }
+
+  // 隐藏手机端不必要的按钮
+  .nav-btn, .caption-trigger { 
+    display: none !important; 
+  }
+
+  #lightbox.lightbox {
+    padding: 15px;
+
+    .lightbox-content {
+      flex-direction: column !important; // 强制上下排列
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: 100% !important;
+      justify-content: flex-start; // 从顶部开始排
+      padding-top: 60px; // 给顶部的关闭按钮留空间
+    }
+
+    .lightbox-image-container {
+      width: 100% !important;
+      height: 50vh !important; // 图片占上半屏
+      flex: none !important;
+
+      img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+      }
+    }
+
+    .lightbox-caption {
+      /* 关键修复：手机端取消隐藏逻辑，直接显示 */
+      display: block !important;
+      opacity: 1 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      flex: 1; /* 占据剩下的所有空间 */
+      
+      margin: 0 !important;
+      padding: 20px 25px !important;
+      background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8)) !important;
+      
+      font-size: 0.9rem !important;
+      line-height: 1.6;
+      overflow-y: auto !important;
+      pointer-events: auto;
+    }
+  }
+
+  // 手机端关闭按钮调大，方便手指点击
+  .close-btn {
+    top: 15px !important;
+    right: 20px !important;
+    font-size: 40px !important;
+    background: rgba(0,0,0,0);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
