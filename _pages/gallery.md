@@ -130,33 +130,39 @@ The fractured coastline of Acadia National Park. The dominant Cadillac Mountain 
 let currentIndex = 0;
 const imageItems = Array.from(document.querySelectorAll('.photo-item'));
 
-
+// 优化：使用函数动态获取，防止为 null
+function getLightboxEl() {
+  return document.getElementById('lightbox');
+}
 
 function openLightbox(el) {
-  const lightbox = document.getElementById('lightbox');
-  
-  // 核心修复：把灯箱移动到 body 最后，脱离所有父容器限制
+  const lightbox = getLightboxEl();
+  if (!lightbox) return; // 安全检查
+
+  // 核心修复：移动节点
   document.body.appendChild(lightbox); 
   
   currentIndex = imageItems.indexOf(el);
   updateLightboxContent();
 
-  // 锁定 body 滚动
   document.body.style.overflow = 'hidden';
-
   lightbox.style.display = 'flex';
-  setTimeout(() => { lightbox.classList.add('active'); }, 10);
+  
+  // 使用 requestAnimationFrame 确保 display: flex 已生效
+  requestAnimationFrame(() => {
+    lightbox.classList.add('active');
+  });
 }
 
 function updateLightboxContent() {
   const lbImg = document.getElementById('lightbox-img');
   const lbCaption = document.getElementById('caption-text');
-  
   const currentItem = imageItems[currentIndex];
-  lbImg.src = currentItem.querySelector('img').src;
-  lbCaption.innerHTML = currentItem.querySelector('.hidden-caption').innerHTML;
   
-  // 注意：这里删除了重置 data-has-caption 的代码，以实现“状态保持”
+  if (lbImg && currentItem) {
+    lbImg.src = currentItem.querySelector('img').src;
+    lbCaption.innerHTML = currentItem.querySelector('.hidden-caption').innerHTML;
+  }
 }
 
 function nextPhoto(e) {
@@ -171,39 +177,59 @@ function prevPhoto(e) {
   updateLightboxContent();
 }
 
-// 交互：点击图片左/右侧切换
-document.getElementById('image-container').addEventListener('click', function(e) {
-  if (e.target.closest('.caption-trigger')) return;
-  const rect = this.getBoundingClientRect();
-  if ((e.clientX - rect.left) < rect.width / 2) prevPhoto();
-  else nextPhoto();
-});
-
-// 键盘支持
-document.addEventListener('keydown', (e) => {
-  const lightbox = document.getElementById('lightbox');
-  if (!lightbox.classList.contains('active')) return;
-  if (e.key === "ArrowRight") nextPhoto();
-  else if (e.key === "ArrowLeft") prevPhoto();
-  else if (e.key === "Escape") closeLightbox();
-});
-
 function toggleCaption(event) {
   event.stopPropagation();
-  const lightbox = document.getElementById('lightbox');
+  const lightbox = getLightboxEl();
   const isCurrentlyShowing = lightbox.getAttribute('data-has-caption') === 'true';
   lightbox.setAttribute('data-has-caption', !isCurrentlyShowing);
 }
 
 function closeLightbox() {
-  const lightbox = document.getElementById('lightbox');
+  const lightbox = getLightboxEl();
   lightbox.classList.remove('active');
   setTimeout(() => { 
     lightbox.style.display = 'none'; 
     document.body.style.overflow = ''; 
-    document.body.style.paddingRight = ''; 
-    lightbox.setAttribute('data-has-caption', 'false'); // 关闭时重置为默认隐藏
+    lightbox.setAttribute('data-has-caption', 'false');
   }, 300);
 }
+
+// 事件绑定：使用 DOMContentLoaded 确保 HTML 已加载
+document.addEventListener('DOMContentLoaded', () => {
+  const lightboxEl = getLightboxEl();
+  const imgContainer = document.getElementById('image-container');
+
+  if (imgContainer) {
+    imgContainer.addEventListener('click', function(e) {
+      if (e.target.closest('.caption-trigger')) return;
+      const rect = this.getBoundingClientRect();
+      if ((e.clientX - rect.left) < rect.width / 2) prevPhoto();
+      else nextPhoto();
+    });
+  }
+
+  // 手机端滑动支持
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightboxEl.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, {passive: true});
+
+  lightboxEl.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    const swipeThreshold = 50;
+    if (touchEndX < touchStartX - swipeThreshold) nextPhoto();
+    if (touchEndX > touchStartX + swipeThreshold) prevPhoto();
+  }, {passive: true});
+
+  // 键盘
+  document.addEventListener('keydown', (e) => {
+    if (!lightboxEl.classList.contains('active')) return;
+    if (e.key === "ArrowRight") nextPhoto();
+    else if (e.key === "ArrowLeft") prevPhoto();
+    else if (e.key === "Escape") closeLightbox();
+  });
+});
 </script>
 
