@@ -435,48 +435,50 @@
 }
 
 @media (max-width: 768px) {
-  .sidebar {
-    margin-top: 2rem !important; /* 根据遮挡程度调整这个值，通常 1.5rem-2rem 足够 */
-    position: relative;
-    z-index: 10; /* 确保它在内容层之上 */
+  /* 1. 核心修复：把整个内容区下移，防止被 Headbar 遮挡 */
+  /* 使用 initial-content 或 #main 配合 padding 是最稳妥的 */
+  #main {
+    padding-top: 5rem !important; /* 增加这个值直到头像完全露出 */
   }
 
-  /* 2. 确保头栏不会永久“压”在所有东西最上面 */
-  .masthead {
-    z-index: 20; /* 保持头栏在上，但我们要配合 margin 使用 */
-    position: relative;
-  }
-
-  /* 3. 如果是侧边栏内部的头像/文字被遮住 */
-  .author__content {
-    padding-top: 10px;
-  }
-  /* 1. 调整名字 (第一个 li) 的间距，让后面的内容靠拢 */
+  /* 2. 名字 (Jia-Le Mou) 极度紧凑化 */
   .greedy-nav .visible-links li:first-child a {
-    font-size: 0.1rem !important;
+    font-size: 0.9rem !important; /* 0.1rem 太小了看不见，建议 0.9 */
     padding-left: 0 !important;
-    /* 核心修改：大幅缩小名字右侧的间距 */
-    padding-right: 0 !important; 
+    padding-right: 0.1rem !important; 
     margin-right: 0 !important;
     font-weight: bold !important;
   }
 
-  /* 2. 导航链接 (Home, Gallery...) 紧凑排版 */
+  /* 3. 导航链接 (Home, Gallery...) 紧贴名字 */
   .greedy-nav .visible-links li:not(:first-child) a {
-    /* 核心修改：缩小链接左侧的间距，让它们向名字靠拢 */
-    margin-left: 0 rem !important; 
-    margin-right: 0.3rem !important;
-    font-size: 1rem !important;
-    padding: 0 0 !important;
+    margin-left: 0.2rem !important; /* 修复了空格错误 */
+    margin-right: 0.2rem !important;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0 !important;
   }
 
-  /* 3. 彻底隐藏折叠按钮多余文字 */
+  /* 4. 侧边栏作者信息微调 */
+  .sidebar, .author__profile {
+    margin-top: 0 !important; /* 既然 #main 已经加了 padding，这里设为 0 */
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 5. 彻底隐藏折叠按钮文字并压缩 Head 高度 */
   .greedy-nav button::before {
     content: none !important;
   }
 
-  /* 4. 压缩 Header 垂直高度 */
   .masthead__inner-wrap {
-    padding: 0 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .masthead {
+    position: fixed !important; /* 强制固定在顶部 */
+    top: 0;
+    width: 100%;
+    z-index: 100 !important;
   }
 }
