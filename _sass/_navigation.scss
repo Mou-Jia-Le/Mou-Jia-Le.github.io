@@ -434,9 +434,12 @@
   }
 }
 
-/* --- 手机端 Head 样式深度优化 --- */
 @media (max-width: 600px) {
   /* 1. 缩小站点标题 (名字) 的大小和间距 */
+  .site-title {
+    font-size: 1.2rem !important; /* 手机端调得更小一点 */
+    margin-right: 10px !important; /* 缩小与右侧链接的距离 */
+
   .greedy-nav .visible-links li:first-child {
     font-size: 0.9rem !important; /* 调小名字字号 */
     max-width: 150px; /* 限制宽度防止挤压 */
@@ -449,20 +452,14 @@
 
   /* 2. 缩小导航链接之间的间距 */
   .greedy-nav a {
-    margin: 0 0.4rem !important; /* 原本是 1rem，现在大幅缩小 */
-    font-size: 0.85rem !important; /* 导航文字也稍微调小一点，更精致 */
+    margin: 0 0.6rem !important; /* 原本是 1rem，现在大幅缩小 */
+    font-size: 1rem !important; /* 导航文字也稍微调小一点，更精致 */
     padding: 0.5rem 0 !important;
   }
 
   /* 3. 调整整体高度，让 Head 看起来更纤细 */
   .masthead__inner-wrap {
-    padding: 0.2rem 0 !important;
+    padding: 0.4rem 0 !important;
   }
 
-  /* 4. 如果导航链接还是太挤，允许它们更紧凑 */
-  .greedy-nav .visible-links {
-    display: flex !important; /* 改用 flex 布局更易控制 */
-    justify-content: flex-start;
-    align-items: center;
-  }
 }
