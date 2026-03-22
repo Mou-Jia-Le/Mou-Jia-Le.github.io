@@ -195,12 +195,12 @@
       height: 100vh !important;
       max-width: 100% !important;
       justify-content: flex-start; // 从顶部开始排
-      padding-top: 60px; // 给顶部的关闭按钮留空间
+      padding-top: 30px; // 给顶部的关闭按钮留空间
     }
 
     .lightbox-image-container {
       width: 100% !important;
-      height: 50vh !important; // 图片占上半屏
+      height: 40vh !important; // 图片占上半屏
       flex: none !important;
 
       img {
@@ -216,11 +216,11 @@
       opacity: 1 !important;
       width: 100% !important;
       max-width: 100% !important;
-      flex: 1; /* 占据剩下的所有空间 */
+      flex: 0.97; /* 占据剩下的所有空间 */
       
       margin: 0 !important;
-      padding: 20px 25px !important;
-      background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8)) !important;
+      padding: 15px 15px !important;
+      background: linear-gradient(to bottom, transparent, rgba(0,0,0,0)) !important;
       
       font-size: 0.9rem !important;
       line-height: 1.6;
