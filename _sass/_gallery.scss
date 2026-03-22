@@ -187,7 +187,7 @@
   }
 
   #lightbox.lightbox {
-    padding: 20px !important;
+    padding: 30px !important;
     top: 0 !important;
     bottom: 0 !important; // 强制拉到最底部，忽略 vh 的计算误差
     left: 0 !important;
@@ -205,7 +205,7 @@
 
     .lightbox-image-container {
       width: 100% !important;
-      height: 45vh !important; // 图片占上半屏
+      height: 50vh !important; // 图片占上半屏
       flex: none !important;
 
       img {
