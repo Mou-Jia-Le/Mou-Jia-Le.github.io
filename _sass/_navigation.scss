@@ -434,34 +434,33 @@
   }
 }
 
-/* ==========================================================================
-   MOBILE NAVIGATION (FINAL STABLE FIX)
-   ========================================================================== */
-
-/* 使用原生 CSS 媒体查询，适配屏幕宽度小于 768px 的设备 */
 @media (max-width: 768px) {
 
-  /* 2. 名字在导航栏中的具体缩放 */
+  /* 1. 调整名字 (第一个 li) 的间距，让后面的内容靠拢 */
   .greedy-nav .visible-links li:first-child a {
     font-size: 0.95rem !important;
     padding-left: 0 !important;
-    padding-right: 0.1rem !important;
+    /* 核心修改：大幅缩小名字右侧的间距 */
+    padding-right: 0.2rem !important; 
+    margin-right: 0 !important;
     font-weight: bold !important;
   }
 
-  /* 3. 导航链接 (Home, Gallery...) 紧凑排版 */
-  .greedy-nav a {
-    margin: 0 0.4rem !important;
-    font-size: 0.85rem !important;
+  /* 2. 导航链接 (Home, Gallery...) 紧凑排版 */
+  .greedy-nav .visible-links li:not(:first-child) a {
+    /* 核心修改：缩小链接左侧的间距，让它们向名字靠拢 */
+    margin-left: 0.2rem !important; 
+    margin-right: 0.3rem !important;
+    font-size: 1rem !important;
     padding: 0.5rem 0 !important;
   }
 
-  /* 4. 彻底隐藏折叠按钮多余文字 */
+  /* 3. 彻底隐藏折叠按钮多余文字 */
   .greedy-nav button::before {
     content: none !important;
   }
 
-  /* 5. 压缩 Header 垂直高度 */
+  /* 4. 压缩 Header 垂直高度 */
   .masthead__inner-wrap {
     padding: 0.2rem 0 !important;
   }
