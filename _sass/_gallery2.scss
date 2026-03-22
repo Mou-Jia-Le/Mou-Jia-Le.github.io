@@ -1,0 +1,246 @@
+/* ==========================================================================
+   Gallery & Lightbox System (Complete Version)
+   ========================================================================== */
+
+/* --- 1. 照片墙网格 (保持 5 列) --- */
+.photo-wall {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin: 1.5rem 0;
+  max-width: 100% !important; 
+}
+
+.photo-item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f8f8f8;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  
+  &:hover { 
+    transform: scale(1.04); 
+    z-index: 2; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+  }
+}
+
+.hidden-caption { display: none; }
+
+/* --- 2. 灯箱基础层 (修正 Head 遮挡) --- */
+.lightbox {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  /* 关键：必须高于 Academic Pages 的 .masthead (通常为 10-20) */
+  z-index: 999999 !important; 
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  
+  &.active { opacity: 1; }
+}
+
+/* 强制压低页面原有导航栏的层级 */
+.masthead {
+  z-index: 1 !important; 
+}
+
+/* --- 3. 导航控制按钮 (左右悬浮) --- */
+.nav-btn {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 1000001 !important;
+  color: rgba(255, 255, 255, 0.3) !important;
+  font-size: 60px !important;
+  font-weight: 300 !important;
+  padding: 40px 20px !important;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.prev-btn { left: 10px !important; }
+.next-btn { right: 10px !important; }
+
+.close-btn {
+  position: absolute !important;
+  top: 25px !important;
+  right: 35px !important;
+  color: #fff !important;
+  font-size: 40px !important;
+  cursor: pointer;
+  z-index: 1000002 !important;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  &:hover { opacity: 1; }
+}
+
+/* --- 4. 内容布局容器 --- */
+.lightbox-content {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: row !important;
+  width: 90vw !important;
+  max-width: 1400px !important;
+  height: 85vh !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent !important;
+}
+
+/* --- 5. 图片容器 & 三点按钮定位 --- */
+.lightbox-image-container {
+  position: relative !important; /* 核心：确保三点按钮基于此定位 */
+  background: transparent !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important; 
+  height: 100% !important;
+  flex-shrink: 0;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: width;
+  
+  img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    /* 每次切换时的淡入效果 */
+    animation: imgFadeIn 0.4s ease;
+  }
+}
+
+@keyframes imgFadeIn {
+  from { opacity: 0.5; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* 当侧边栏展开时图片缩小 */
+[data-has-caption="true"] .lightbox-image-container {
+  width: 65% !important; 
+}
+
+/* --- 6. 三点按钮 (Caption Trigger) --- */
+.caption-trigger {
+  position: absolute !important; 
+  right: 20px !important;
+  bottom: 20px !important;
+  width: 35px;
+  height: 35px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 4px; 
+  cursor: pointer;
+  z-index: 1000005 !important;
+  background: rgba(0,0,0,0.2) !important; 
+  border-radius: 50%;
+  border: none !important; 
+  opacity: 0.6;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    opacity: 1;
+    background: rgba(255,255,255,0.1) !important;
+  }
+  
+  span {
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    display: block;
+  }
+}
+
+[data-has-caption="true"] .caption-trigger {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+/* --- 7. 右侧注释区 --- */
+.lightbox-caption {
+  width: 0;
+  opacity: 0;
+  padding: 0 !important;
+  color: #fff !important;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  background: transparent !important;
+  pointer-events: none; 
+}
+
+/* 隐藏滚动条 */
+.lightbox-caption::-webkit-scrollbar { display: none; }
+.lightbox-caption { -ms-overflow-style: none; scrollbar-width: none; }
+
+[data-has-caption="true"] .lightbox-caption {
+  width: 35% !important;
+  opacity: 1;
+  padding: 0 40px !important;
+  pointer-events: auto;
+}
+
+#caption-text {
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+  color: #efefef !important;
+  text-align: left !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* --- 8. 手机端适配 --- */
+@media (max-width: 900px) {
+  .photo-wall {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .nav-btn { display: none !important; } /* 手机端隐藏侧边按钮，靠点击图片两侧切换 */
+
+  .lightbox-content {
+    flex-direction: column !important;
+    height: auto !important;
+    max-height: 90vh !important;
+    width: 95vw !important;
+    overflow-y: auto !important; 
+  }
+
+  .lightbox-image-container {
+    width: 100% !important;
+    height: 50vh !important;
+    
+    [data-has-caption="true"] & { width: 100% !important; }
+  }
+
+  .lightbox-caption {
+    width: 100% !important;
+    opacity: 1 !important;
+    padding: 20px 15px !important;
+    display: block !important;
+    pointer-events: auto !important;
+    height: auto !important;
+  }
+
+  .caption-trigger { display: none !important; } /* 手机端强制显示注释，隐藏切换按钮 */
+}

@@ -1,4 +1,8 @@
-/* --- 网格部分 (保持原样) --- */
+/* ==========================================================================
+   Gallery & Lightbox System - 终极整合版
+   ========================================================================== */
+
+/* --- 1. 照片墙网格 --- */
 .photo-wall {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -6,48 +10,45 @@
   margin: 1rem 0;
   max-width: 100% !important; 
 }
+
 .photo-item {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   cursor: pointer;
   background: #f8f8f8;
   transition: transform 0.2s ease;
+  &:hover { transform: scale(1.04); z-index: 2; }
+  img { width: 100%; height: 100%; object-fit: cover; }
 }
-.photo-item:hover { transform: scale(1.04); z-index: 2; }
-.photo-item img { width: 100%; height: 100%; object-fit: cover; }
-.hidden-caption { display: none; }
 
-/* --- 灯箱基础层 --- */
-.lightbox {
+/* --- 2. 灯箱基础容器 (彻底压制 Masthead) --- */
+#lightbox.lightbox {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  z-index: 2147483647 !important;
-  display: none;
+  width: 100vw !important;
+  height: 100vh !important;
+  /* 使用 CSS 最大整数确保置顶 */
+  z-index: 2147483647 !important; 
+  background: rgba(0, 0, 0, 0.8) !important;
+  display: none; /* 由 JS 控制 display: flex */
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-.lightbox.active { opacity: 1; }
 
-.close-btn {
-  position: absolute !important;
-  top: 20px !important;
-  right: 30px !important;
-  color: #fff !important;
-  font-size: 35px !important;
-  cursor: pointer;
-  z-index: 2147483648 !important;
-  opacity: 0.5;
-  transition: opacity 0.3s;
+  &.active {
+    opacity: 1;
+    display: flex !important;
+  }
 }
-.close-btn:hover { opacity: 1; }
 
-/* --- 内容容器 (优化点1：调整动画曲线与硬件加速) --- */
+/* 强制压低页面原有导航栏权重 */
+.masthead {
+  z-index: 1 !important; 
+}
+
+/* --- 3. 内容布局结构 --- */
 .lightbox-content {
   position: relative !important;
   display: flex !important;
@@ -55,192 +56,129 @@
   width: 90vw !important;
   max-width: 1400px !important;
   height: 85vh !important;
-  /* 优化：使用标准缓动曲线，增加到 0.5s 让过渡更平稳 */
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   background: transparent !important;
-  /* 优化：告知浏览器即将发生位移，减少渲染卡顿 */
-  will-change: width; 
 }
 
-/* 图片容器 (优化点2：同步动画参数) */
+/* --- 4. 图片容器 (三点按钮的锚点) --- */
 .lightbox-image-container {
-  position: relative;
-  background: transparent !important;
+  position: relative !important; 
+  flex: 1;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  width: 100% !important; 
   height: 100% !important;
-  /* 优化：保持 0.5s 曲线一致 */
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  flex-shrink: 0;
-  will-change: width;
-}
-.lightbox-image-container img {
-  max-width: 100% !important;
-  max-height: 100% !important;
-  object-fit: contain !important;
-  /* 优化：防止缩放时产生细微抖动 */
-  transform: translateZ(0);
+  overflow: hidden;
+
+  img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+  }
 }
 
-[data-has-caption="true"] .lightbox-image-container {
-  width: 65% !important; 
-}
-
-/* --- 纯三点按钮样式 --- */
+/* --- 7. 三点按钮 (全屏右下角版) --- */
 .caption-trigger {
-  position: absolute !important; 
-  right: 10px;
-  bottom: 10px;
-  width: 30px;
-  height: 30px;
+  position: absolute !important;
+  /* 关键：使用 fixed 或相对于 content 的绝对定位 */
+  right: 30px !important;  /* 距离屏幕/容器右侧 30px */
+  bottom: 30px !important; /* 距离底部 30px */
+  top: auto !important;
+  left: auto !important;
+  
+  width: 40px !important;
+  height: 40px !important;
+  background: none !important;
+  border: none !important;
   display: flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 4px; 
-  cursor: pointer;
-  z-index: 2147483649 !important;
-  background: transparent !important; 
-  border: none !important; 
-  opacity: 0.4;
-  /* 优化：旋转动画同步到 0.5s */
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  cursor: pointer !important;
+  z-index: 2147483649 !important; /* 确保它在最顶层，不被任何东西遮挡 */
+  
+  opacity: 0.6;
+  transition: all 0.3s ease !important;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  span {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: white !important;
+    border-radius: 50% !important;
+    display: block !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.8) !important;
+  }
 }
 
-.caption-trigger:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-.caption-trigger span {
-  width: 5px;
-  height: 5px;
-  background: white;
-  border-radius: 50%;
-  display: block;
-}
-
+/* 即使注释打开，它也依然保持在原本的右下角位置 */
 [data-has-caption="true"] .caption-trigger {
+  transform: rotate(90deg);
   opacity: 1;
-  transform: rotate(90deg); 
+  /* 这里不需要修改 right/bottom，它会雷打不动地留在那里 */
 }
 
-/* --- 右侧注释区 (优化点3：优化透明度与宽度的同步) --- */
+//* --- 6. 右侧注释区逻辑 --- */
 .lightbox-caption {
   width: 0;
   opacity: 0;
   padding: 0 !important;
   color: #fff !important;
-  /* 优化：保持 0.5s 曲线一致 */
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
   display: flex;
   align-items: center;
-  background: transparent !important;
-  /* 优化：隐藏状态下禁止鼠标干扰 */
-  pointer-events: none; 
+  pointer-events: none;
 }
 
-/* 隐藏滚动条 */
-.lightbox-caption::-webkit-scrollbar { display: none; }
-.lightbox-caption { -ms-overflow-style: none; scrollbar-width: none; }
-
-[data-has-caption="true"] .lightbox-caption {
-  width: 35% !important;
-  opacity: 1;
-  padding: 0 40px !important;
-  pointer-events: auto;
+/* 当开启注释时的状态变换 */
+[data-has-caption="true"] {
+  .lightbox-image-container { width: 65% !important; flex: none; }
+  .lightbox-caption { 
+    width: 35% !important; 
+    opacity: 1 !important; 
+    padding: 0 40px !important; 
+    pointer-events: auto; 
+  }
+  .caption-trigger { transform: rotate(90deg); opacity: 1; }
 }
 
-#caption-text {
-  font-size: 1.05rem !important;
-  line-height: 1.8 !important;
-  color: #efefef !important;
-  text-align: left !important;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-  /* 优化：防止文字布局抖动 */
-  backface-visibility: hidden;
+/* --- 7. 控制按钮 (关闭、左、右) --- */
+.close-btn {
+  position: absolute !important;
+  top: 20px !important;
+  right: 30px !important;
+  z-index: 2147483649 !important;
+  color: #fff !important;
+  font-size: 35px !important;
+  cursor: pointer;
+  opacity: 0.6;
+  &:hover { opacity: 1; }
 }
 
+.nav-btn {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 2147483648 !important;
+  color: rgba(255, 255, 255, 0.3) !important;
+  font-size: 40px !important;
+  padding: 20px !important;
+  cursor: pointer !important;
+  &:hover { color: #fff !important; }
+}
+.prev-btn { left: 10px !important; }
+.next-btn { right: 10px !important; }
 
-
-/* --- 手机端/窄屏适配：取消三点交互，直接上下排布 --- */
+/* --- 8. 手机端适配 --- */
 @media (max-width: 900px) {
-  /* --- A. 3列网格布局 --- */
-  .photo-wall {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 10px !important;
-    margin: 1rem 0 !important;
-    width: 100% !important;
-  }
-
-  .photo-item:hover {
-    transform: none !important;
-    box-shadow: none !important;
-  }
-
-  .lightbox {
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  }
-  .lightbox-content {
-    flex-direction: column !important;
-    height: auto !important;
-    max-height: 90vh !important;
-    width: 95vw !important;
-    margin: auto !important;
-    background: transparent !important;
-    /* 允许整体内容超出时滚动，防止底部文字被截断 */
-    overflow-y: auto !important; 
-  }
-
-  /* --- C. 图片容器铺满 --- */
-  .lightbox-image-container {
-    width: 100% !important;
-    height: 50vh !important; /* 手机端默认给图一半屏幕高度 */
-    flex-shrink: 0 !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .lightbox-image-container img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-  }
-
-  /* --- D. 文字区自动显示且排在下方 --- */
-  .lightbox-caption {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 50px;
-    opacity: 1 !important;
-    padding: 20px 15px !important;
-    display: block !important;
-    pointer-events: auto !important;
-    /* 即使没有 data-has-caption 属性也强制重置宽度 */
-    transition: none !important; 
-  }
-
-  #caption-text {
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    color: #efefef !important;
-    text-align: left !important;
-    text-shadow: none !important;
-    margin: 0 !important;
-  }
-
-  /* --- E. 交互清理 --- */
-  /* 彻底隐藏手机端的三点按钮 */
-  .caption-trigger {
-    display: none !important;
-  }
-
-  /* 强制重置 PC 端的百分比布局 */
-  [data-has-caption="true"] .lightbox-image-container,
-  [data-has-caption="true"] .lightbox-caption {
-    width: 100% !important;
-  }
+  .photo-wall { grid-template-columns: repeat(3, 1fr) !important; }
+  .nav-btn, .caption-trigger { display: none !important; }
+  .lightbox-content { flex-direction: column !important; height: auto !important; max-height: 90vh !important; }
+  .lightbox-image-container { width: 100% !important; height: 50vh !important; }
+  .lightbox-caption { width: 100% !important; opacity: 1 !important; padding: 20px !important; display: block !important; }
 }

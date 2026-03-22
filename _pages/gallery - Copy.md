@@ -104,89 +104,50 @@ The fractured coastline of Acadia National Park. The dominant Cadillac Mountain 
   </div>
 </div>
 
-<div id="lightbox" class="lightbox" data-has-caption="false">
-  <span class="close-btn" onclick="closeLightbox()">&times;</span>
-  <div class="nav-btn prev-btn" id="prev-btn" onclick="prevPhoto(event)">&#10094;</div>
-  <div class="nav-btn next-btn" id="next-btn" onclick="nextPhoto(event)">&#10095;</div>
 
+<div id="lightbox" class="lightbox" onclick="closeLightbox()" data-has-caption="false">
+  <span class="close-btn" onclick="closeLightbox()">&times;</span>
   <div class="lightbox-content" onclick="event.stopPropagation()">
-    <div class="lightbox-image-container" id="image-container">
+    <div class="lightbox-image-container">
       <img id="lightbox-img" src="" alt="">
     </div>
-    
     <div id="lightbox-caption" class="lightbox-caption">
-      <div id="caption-text"></div>
+      <p id="caption-text"></p>
     </div>
-
     <div class="caption-trigger" onclick="toggleCaption(event)" title="Show/hide description">
       <span></span><span></span><span></span>
     </div>
   </div>
 </div>
 
-
-
 <script>
-let currentIndex = 0;
-const imageItems = Array.from(document.querySelectorAll('.photo-item'));
-
-
-
 function openLightbox(el) {
   const lightbox = document.getElementById('lightbox');
-  
-  // 核心修复：把灯箱移动到 body 最后，脱离所有父容器限制
-  document.body.appendChild(lightbox); 
-  
-  currentIndex = imageItems.indexOf(el);
-  updateLightboxContent();
-
-  // 锁定 body 滚动
-  document.body.style.overflow = 'hidden';
-
-  lightbox.style.display = 'flex';
-  setTimeout(() => { lightbox.classList.add('active'); }, 10);
-}
-
-function updateLightboxContent() {
   const lbImg = document.getElementById('lightbox-img');
   const lbCaption = document.getElementById('caption-text');
   
-  const currentItem = imageItems[currentIndex];
-  lbImg.src = currentItem.querySelector('img').src;
-  lbCaption.innerHTML = currentItem.querySelector('.hidden-caption').innerHTML;
-  
-  // 注意：这里删除了重置 data-has-caption 的代码，以实现“状态保持”
+  const clickedImg = el.querySelector('img');
+  const captionData = el.querySelector('.hidden-caption').innerHTML;
+  lbImg.src = clickedImg.src;
+  lbCaption.innerHTML = captionData;
+
+  const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+  document.body.style.paddingRight = scrollBarWidth + 'px';
+  document.body.style.overflow = 'hidden';
+
+  lightbox.setAttribute('data-has-caption', 'false');
+
+  const tempImg = new Image();
+  tempImg.src = clickedImg.src;
+  tempImg.onload = function() {
+    document.body.appendChild(lightbox);
+    lightbox.style.display = 'flex';
+    setTimeout(() => { 
+      lightbox.classList.add('active'); 
+      document.body.classList.add('lightbox-open');
+    }, 10);
+  };
 }
-
-function nextPhoto(e) {
-  if (e) e.stopPropagation();
-  currentIndex = (currentIndex + 1) % imageItems.length;
-  updateLightboxContent();
-}
-
-function prevPhoto(e) {
-  if (e) e.stopPropagation();
-  currentIndex = (currentIndex - 1 + imageItems.length) % imageItems.length;
-  updateLightboxContent();
-}
-
-// 交互：点击图片左/右侧切换
-document.getElementById('image-container').addEventListener('click', function(e) {
-  if (e.target.closest('.caption-trigger')) return;
-  const rect = this.getBoundingClientRect();
-  if ((e.clientX - rect.left) < rect.width / 2) prevPhoto();
-  else nextPhoto();
-});
-
-// 键盘支持
-document.addEventListener('keydown', (e) => {
-  const lightbox = document.getElementById('lightbox');
-  if (!lightbox.classList.contains('active')) return;
-  if (e.key === "ArrowRight") nextPhoto();
-  else if (e.key === "ArrowLeft") prevPhoto();
-  else if (e.key === "Escape") closeLightbox();
-});
 
 function toggleCaption(event) {
   event.stopPropagation();
@@ -198,12 +159,12 @@ function toggleCaption(event) {
 function closeLightbox() {
   const lightbox = document.getElementById('lightbox');
   lightbox.classList.remove('active');
+  document.body.classList.remove('lightbox-open');
   setTimeout(() => { 
     lightbox.style.display = 'none'; 
     document.body.style.overflow = ''; 
     document.body.style.paddingRight = ''; 
-    lightbox.setAttribute('data-has-caption', 'false'); // 关闭时重置为默认隐藏
+    lightbox.setAttribute('data-has-caption', 'false');
   }, 300);
 }
 </script>
-
