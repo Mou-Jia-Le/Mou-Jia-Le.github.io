@@ -435,11 +435,7 @@
 }
 
 @media (max-width: 768px) {
-  /* 1. 核心修复：把整个内容区下移，防止被 Headbar 遮挡 */
-  /* 使用 initial-content 或 #main 配合 padding 是最稳妥的 */
-  #main {
-    padding-top: 5rem !important; /* 增加这个值直到头像完全露出 */
-  }
+
 
   /* 2. 名字 (Jia-Le Mou) 极度紧凑化 */
   .greedy-nav .visible-links li:first-child a {
@@ -465,9 +461,8 @@
     z-index: 1;
   }
 
-  /* 5. 彻底隐藏折叠按钮文字并压缩 Head 高度 */
-  .greedy-nav button::before {
-    content: none !important;
+  .greedy-nav button {
+    display: none !important;
   }
 
   .masthead__inner-wrap {
@@ -481,4 +476,9 @@
     width: 100%;
     z-index: 100 !important;
   }
+  
+  .author__urls-wrapper .btn--inverse {
+    display: none !important;
+}
+
 }
