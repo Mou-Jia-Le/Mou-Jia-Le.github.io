@@ -433,52 +433,18 @@
     }
   }
 }
-
 @media (max-width: 768px) {
-
-
-  /* 2. 名字 (Jia-Le Mou) 极度紧凑化 */
-  .greedy-nav .visible-links li:first-child a {
-    font-size: 0.9rem !important; /* 0.1rem 太小了看不见，建议 0.9 */
-    padding-left: 0 !important;
-    padding-right: 0.1rem !important; 
-    margin-right: 0 !important;
-    font-weight: bold !important;
+  .greedy-nav .visible-links .masthead__menu-item--lg .site-title .name-en {
+    font-size: 1.7rem !important;
   }
 
-  /* 3. 导航链接 (Home, Gallery...) 紧贴名字 */
-  .greedy-nav .visible-links li:not(:first-child) a {
-    margin-left: 0.2rem !important; /* 修复了空格错误 */
-    margin-right: 0.2rem !important;
-    font-size: 0.85rem !important;
-    padding: 0.5rem 0 !important;
+  .greedy-nav .visible-links li:not(.masthead__menu-item--lg) a {
+    font-size: 0.7rem !important;
+    padding: 0.2rem !important;
+    margin: 0 !important;
   }
-
-  /* 4. 侧边栏作者信息微调 */
-  .sidebar, .author__profile {
-    margin-top: 0 !important; /* 既然 #main 已经加了 padding，这里设为 0 */
-    position: relative;
-    z-index: 1;
-  }
-
   .greedy-nav button {
     display: none !important;
-  }
 
-  .masthead__inner-wrap {
-    padding: 0 !important;
-    min-height: 0 !important;
   }
-
-  .masthead {
-    position: fixed !important; /* 强制固定在顶部 */
-    top: 0;
-    width: 100%;
-    z-index: 100 !important;
-  }
-  
-  .author__urls-wrapper .btn--inverse {
-    display: none !important;
-}
-
 }
