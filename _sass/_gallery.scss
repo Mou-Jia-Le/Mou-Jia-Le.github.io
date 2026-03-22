@@ -1,0 +1,173 @@
+/* --- 网格部分 (保持原样) --- */
+.photo-wall {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin: 1rem 0;
+  max-width: 100% !important; 
+}
+.photo-item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f8f8f8;
+  transition: transform 0.2s ease;
+}
+.photo-item:hover { transform: scale(1.04); z-index: 2; }
+.photo-item img { width: 100%; height: 100%; object-fit: cover; }
+.hidden-caption { display: none; }
+
+/* --- 灯箱基础层 --- */
+.lightbox {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: 2147483647 !important;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.lightbox.active { opacity: 1; }
+
+.close-btn {
+  position: absolute !important;
+  top: 20px !important;
+  right: 30px !important;
+  color: #fff !important;
+  font-size: 35px !important;
+  cursor: pointer;
+  z-index: 2147483648 !important;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.close-btn:hover { opacity: 1; }
+
+/* --- 内容容器 (优化点1：调整动画曲线与硬件加速) --- */
+.lightbox-content {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: row !important;
+  width: 90vw !important;
+  max-width: 1400px !important;
+  height: 85vh !important;
+  /* 优化：使用标准缓动曲线，增加到 0.5s 让过渡更平稳 */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent !important;
+  /* 优化：告知浏览器即将发生位移，减少渲染卡顿 */
+  will-change: width; 
+}
+
+/* 图片容器 (优化点2：同步动画参数) */
+.lightbox-image-container {
+  position: relative;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important; 
+  height: 100% !important;
+  /* 优化：保持 0.5s 曲线一致 */
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  will-change: width;
+}
+.lightbox-image-container img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  /* 优化：防止缩放时产生细微抖动 */
+  transform: translateZ(0);
+}
+
+[data-has-caption="true"] .lightbox-image-container {
+  width: 65% !important; 
+}
+
+/* --- 纯三点按钮样式 --- */
+.caption-trigger {
+  position: absolute !important; 
+  right: 10px;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 4px; 
+  cursor: pointer;
+  z-index: 2147483649 !important;
+  background: transparent !important; 
+  border: none !important; 
+  opacity: 0.4;
+  /* 优化：旋转动画同步到 0.5s */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.caption-trigger:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.caption-trigger span {
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  display: block;
+}
+
+[data-has-caption="true"] .caption-trigger {
+  opacity: 1;
+  transform: rotate(90deg); 
+}
+
+/* --- 右侧注释区 (优化点3：优化透明度与宽度的同步) --- */
+.lightbox-caption {
+  width: 0;
+  opacity: 0;
+  padding: 0 !important;
+  color: #fff !important;
+  /* 优化：保持 0.5s 曲线一致 */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  background: transparent !important;
+  /* 优化：隐藏状态下禁止鼠标干扰 */
+  pointer-events: none; 
+}
+
+/* 隐藏滚动条 */
+.lightbox-caption::-webkit-scrollbar { display: none; }
+.lightbox-caption { -ms-overflow-style: none; scrollbar-width: none; }
+
+[data-has-caption="true"] .lightbox-caption {
+  width: 35% !important;
+  opacity: 1;
+  padding: 0 40px !important;
+  pointer-events: auto;
+}
+
+#caption-text {
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+  color: #efefef !important;
+  text-align: left !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  /* 优化：防止文字布局抖动 */
+  backface-visibility: hidden;
+}
+
+/* 手机端适配：保持原样 */
+@media (max-width: 900px) {
+  .lightbox-content { flex-direction: column !important; height: auto !important; }
+  .lightbox-image-container { height: 60vh !important; width: 100% !important; }
+  [data-has-caption="true"] .lightbox-image-container { width: 100% !important; height: 45vh !important; }
+  [data-has-caption="true"] .lightbox-caption { width: 100% !important; padding: 30px 20px !important; }
+  .caption-trigger { bottom: 0; }
+}
