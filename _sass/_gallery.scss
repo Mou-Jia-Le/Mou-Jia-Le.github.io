@@ -187,7 +187,7 @@
   }
 
   #lightbox.lightbox {
-    padding: 15px;
+    padding: 15px !important;
 
     .lightbox-content {
       flex-direction: column !important; // 强制上下排列
@@ -195,7 +195,7 @@
       height: 100vh !important;
       max-width: 100% !important;
       justify-content: flex-start; // 从顶部开始排
-      padding-top: 30px; // 给顶部的关闭按钮留空间
+      padding-top: 30px !important; // 给顶部的关闭按钮留空间
     }
 
     .lightbox-image-container {
