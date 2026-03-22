@@ -164,21 +164,82 @@
 }
 
 
-@media (max-width: 768px) {
+
+/* --- 手机端/窄屏适配：取消三点交互，直接上下排布 --- */
+@media (max-width: 900px) {
+  /* --- A. 3列网格布局 --- */
   .photo-wall {
-    /* 1. 强制手机端改为 3 列 */
     grid-template-columns: repeat(3, 1fr) !important;
-    
-    /* 2. 适当调小手机端的间距，让图片能更大一点 */
     gap: 10px !important;
-    
-    /* 3. 稍微调小上下边距，节省空间 */
     margin: 1rem 0 !important;
+    width: 100% !important;
   }
-  
-  /* 4. 如果你想让悬停缩放效果在手机上不那么突兀 */
+
   .photo-item:hover {
-    transform: none !important; /* 或者 scale(1.02) */
+    transform: none !important;
     box-shadow: none !important;
+  }
+
+  /* --- B. 灯箱容器重置 (上图下文) --- */
+  .lightbox-content {
+    flex-direction: column !important;
+    height: auto !important;
+    max-height: 90vh !important;
+    width: 95vw !important;
+    margin: auto !important;
+    background: transparent !important;
+    /* 允许整体内容超出时滚动，防止底部文字被截断 */
+    overflow-y: auto !important; 
+  }
+
+  /* --- C. 图片容器铺满 --- */
+  .lightbox-image-container {
+    width: 100% !important;
+    height: 50vh !important; /* 手机端默认给图一半屏幕高度 */
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox-image-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  /* --- D. 文字区自动显示且排在下方 --- */
+  .lightbox-caption {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 50px;
+    opacity: 1 !important;
+    padding: 20px 15px !important;
+    display: block !important;
+    background: transparent !important;
+    pointer-events: auto !important;
+    /* 即使没有 data-has-caption 属性也强制重置宽度 */
+    transition: none !important; 
+  }
+
+  #caption-text {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: #efefef !important;
+    text-align: left !important;
+    text-shadow: none !important;
+    margin: 0 !important;
+  }
+
+  /* --- E. 交互清理 --- */
+  /* 彻底隐藏手机端的三点按钮 */
+  .caption-trigger {
+    display: none !important;
+  }
+
+  /* 强制重置 PC 端的百分比布局 */
+  [data-has-caption="true"] .lightbox-image-container,
+  [data-has-caption="true"] .lightbox-caption {
+    width: 100% !important;
   }
 }
