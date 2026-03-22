@@ -434,33 +434,32 @@
   }
 }
 
-@media (max-width: 600px) {
-  /* 1. 缩小站点标题 (名字) 的大小和间距 */
-  .site-title {
-    font-size: 1.2rem !important; /* 手机端调得更小一点 */
-    margin-right: 10px !important; /* 缩小与右侧链接的距离 */
-  }
+/* --- 手机端/窄屏导航深度优化 (合并推荐版) --- */
+@include at-breakpoint(max-width: $medium) {
 
+  /* 1. 名字 (Jia-Le Mou) 大小精准调整 */
   .greedy-nav .visible-links li:first-child {
-    font-size: 0.9rem !important; /* 调小名字字号 */
-    max-width: 150px; /* 限制宽度防止挤压 */
+    a {
+      font-size: 0.95rem;     /* 调小名字，防止挤压 */
+      padding-left: 0;        /* 紧贴左边缘 */
+      padding-right: 0.5rem;  /* 给名字后面留一点呼吸感 */
+      font-weight: bold;
+    }
   }
 
-  .greedy-nav .visible-links li:first-child a {
-    margin-right: 0.5rem !important; /* 名字右侧间距缩小 */
-    padding: 0.5rem 0 !important;
-  }
-
-  /* 2. 缩小导航链接之间的间距 */
+  /* 2. 导航链接 (Home, Research, Gallery) 间距调整 */
   .greedy-nav a {
-    margin: 0 0.6rem !important; /* 原本是 1rem，现在大幅缩小 */
-    font-size: 1rem !important; /* 导航文字也稍微调小一点，更精致 */
-    padding: 0.5rem 0 !important;
+    margin: 0 0.4rem;        /* 缩窄链接之间的空隙 */
+    font-size: 0.85rem;      /* 文字缩小，确保一行排开 */
   }
 
-  /* 3. 调整整体高度，让 Head 看起来更纤细 */
+  /* 3. 彻底隐藏可能出现的 History 或 折叠按钮文字 */
+  .greedy-nav button::before {
+    content: none !important;
+  }
+
+  /* 4. 压缩 Header 高度 */
   .masthead__inner-wrap {
-    padding: 0.4rem 0 !important;
+    padding: 0.2rem 0;
   }
-
 }
