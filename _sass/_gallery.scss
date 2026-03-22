@@ -163,11 +163,22 @@
   backface-visibility: hidden;
 }
 
-/* 手机端适配：保持原样 */
-@media (max-width: 900px) {
-  .lightbox-content { flex-direction: column !important; height: auto !important; }
-  .lightbox-image-container { height: 60vh !important; width: 100% !important; }
-  [data-has-caption="true"] .lightbox-image-container { width: 100% !important; height: 45vh !important; }
-  [data-has-caption="true"] .lightbox-caption { width: 100% !important; padding: 30px 20px !important; }
-  .caption-trigger { bottom: 0; }
+
+@media (max-width: 768px) {
+  .photo-wall {
+    /* 1. 强制手机端改为 3 列 */
+    grid-template-columns: repeat(3, 1fr) !important;
+    
+    /* 2. 适当调小手机端的间距，让图片能更大一点 */
+    gap: 10px !important;
+    
+    /* 3. 稍微调小上下边距，节省空间 */
+    margin: 1rem 0 !important;
+  }
+  
+  /* 4. 如果你想让悬停缩放效果在手机上不那么突兀 */
+  .photo-item:hover {
+    transform: none !important; /* 或者 scale(1.02) */
+    box-shadow: none !important;
+  }
 }
