@@ -441,17 +441,11 @@
 /* 使用原生 CSS 媒体查询，适配屏幕宽度小于 768px 的设备 */
 @media (max-width: 768px) {
 
-  /* 1. 站点标题 (Jia-Le Mou) 大小微调 */
-  .site-title {
-    font-size: 0.1rem !important;
-    margin-right: 8px !important;
-  }
-
   /* 2. 名字在导航栏中的具体缩放 */
   .greedy-nav .visible-links li:first-child a {
     font-size: 0.95rem !important;
     padding-left: 0 !important;
-    padding-right: 0.4rem !important;
+    padding-right: 0.1rem !important;
     font-weight: bold !important;
   }
 
