@@ -434,23 +434,23 @@
   }
 }
 
-/* --- 手机端/窄屏导航深度优化 (合并推荐版) --- */
-@include at-breakpoint(max-width: $medium) {
+/* 使用 Susy 标准的 Mixin 语法：直接传入断点变量 */
+@include at-breakpoint($medium) {
 
   /* 1. 名字 (Jia-Le Mou) 大小精准调整 */
   .greedy-nav .visible-links li:first-child {
     a {
-      font-size: 0.95rem;     /* 调小名字，防止挤压 */
-      padding-left: 0;        /* 紧贴左边缘 */
-      padding-right: 0.5rem;  /* 给名字后面留一点呼吸感 */
+      font-size: 0.95rem !important; 
+      padding-left: 0 !important;
+      padding-right: 0.5rem !important;
       font-weight: bold;
     }
   }
 
   /* 2. 导航链接 (Home, Research, Gallery) 间距调整 */
   .greedy-nav a {
-    margin: 0 0.4rem;        /* 缩窄链接之间的空隙 */
-    font-size: 0.85rem;      /* 文字缩小，确保一行排开 */
+    margin: 0 0.4rem !important;
+    font-size: 0.85rem !important;
   }
 
   /* 3. 彻底隐藏可能出现的 History 或 折叠按钮文字 */
@@ -460,6 +460,6 @@
 
   /* 4. 压缩 Header 高度 */
   .masthead__inner-wrap {
-    padding: 0.2rem 0;
+    padding: 0.2rem 0 !important;
   }
 }
