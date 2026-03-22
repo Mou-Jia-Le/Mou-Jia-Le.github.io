@@ -434,31 +434,40 @@
   }
 }
 
-/* 使用 Susy 标准的 Mixin 语法：直接传入断点变量 */
-@include at-breakpoint($medium) {
+/* ==========================================================================
+   MOBILE NAVIGATION (FINAL STABLE FIX)
+   ========================================================================== */
 
-  /* 1. 名字 (Jia-Le Mou) 大小精准调整 */
-  .greedy-nav .visible-links li:first-child {
-    a {
-      font-size: 0.95rem !important; 
-      padding-left: 0 !important;
-      padding-right: 0.5rem !important;
-      font-weight: bold;
-    }
+/* 使用原生 CSS 媒体查询，适配屏幕宽度小于 768px 的设备 */
+@media (max-width: 768px) {
+
+  /* 1. 站点标题 (Jia-Le Mou) 大小微调 */
+  .site-title {
+    font-size: 0.1rem !important;
+    margin-right: 8px !important;
   }
 
-  /* 2. 导航链接 (Home, Research, Gallery) 间距调整 */
+  /* 2. 名字在导航栏中的具体缩放 */
+  .greedy-nav .visible-links li:first-child a {
+    font-size: 0.95rem !important;
+    padding-left: 0 !important;
+    padding-right: 0.4rem !important;
+    font-weight: bold !important;
+  }
+
+  /* 3. 导航链接 (Home, Gallery...) 紧凑排版 */
   .greedy-nav a {
     margin: 0 0.4rem !important;
     font-size: 0.85rem !important;
+    padding: 0.5rem 0 !important;
   }
 
-  /* 3. 彻底隐藏可能出现的 History 或 折叠按钮文字 */
+  /* 4. 彻底隐藏折叠按钮多余文字 */
   .greedy-nav button::before {
     content: none !important;
   }
 
-  /* 4. 压缩 Header 高度 */
+  /* 5. 压缩 Header 垂直高度 */
   .masthead__inner-wrap {
     padding: 0.2rem 0 !important;
   }
