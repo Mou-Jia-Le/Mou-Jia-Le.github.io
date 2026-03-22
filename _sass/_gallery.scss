@@ -180,7 +180,9 @@
     box-shadow: none !important;
   }
 
-  /* --- B. 灯箱容器重置 (上图下文) --- */
+  .lightbox {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  }
   .lightbox-content {
     flex-direction: column !important;
     height: auto !important;
@@ -216,7 +218,6 @@
     opacity: 1 !important;
     padding: 20px 15px !important;
     display: block !important;
-    background: transparent !important;
     pointer-events: auto !important;
     /* 即使没有 data-has-caption 属性也强制重置宽度 */
     transition: none !important; 
