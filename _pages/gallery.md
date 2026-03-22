@@ -9,19 +9,18 @@ custom_css: gallery
 <div class="gallery-section">
 
   <!-- Gallery Item 1 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/1craterlake.webp" alt="Gallery Item 1">
     </div>
     <div class="gallery-text">
 Crater Lake’s crystal-clear waters, viewed from the caldera floor. As the deepest lake in the USA, this majestic caldera was formed approximately 7,700 years ago by the collapse of Mount Mazama after its massive eruption emptied the magma chamber. 
-
     </div>
   </div>
 
 
   <!-- Gallery Item 2 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/2craterlake.webp" alt="Gallery Item 2">
     </div>
@@ -33,7 +32,7 @@ Columnar Jointing exposed on the inner walls of the caldera from the Cleetwood C
 
 
   <!-- Gallery Item 4 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/3yellowstone.webp" alt="Gallery Item 4">
     </div>
@@ -44,7 +43,7 @@ Dawn mist over Henry’s Fork, looking east toward the active Yellowstone Hotspo
 
   
 <!-- Gallery Item 5 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/4southsister.webp" alt="Gallery Item 5">
     </div>
@@ -56,7 +55,7 @@ This high-silica rhyolitic glass was formed through rapid quenching and extreme 
 
 
 <!-- Gallery Item 6 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/5southsister.webp" alt="Gallery Item 6">
     </div>
@@ -66,7 +65,7 @@ A massive block of flow-banded rhyolitic lava at the foot of South Sister. The i
   </div>
 
 <!-- Gallery Item 6 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/6shiprock.webp" alt="Gallery Item 6">
     </div>
@@ -76,7 +75,7 @@ Shiprock (Tsé Bitʼaʼí) in the mist of the Navajo desert. It is a classic vol
   </div>
 
 <!-- Gallery Item 7 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/7keketuohai.webp" alt="Gallery Item 7">
     </div>
@@ -86,7 +85,7 @@ The aquamarine-blue lake at the bottom of the Koktokay No. 3 pit. Renowned for i
   </div>
 
 <!-- Gallery Item 8 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/8bigbend.webp" alt="Gallery Item 8">
     </div>
@@ -96,7 +95,7 @@ Standing atop Emory Peak, the highest point of Big Bend National Park. This summ
   </div>
 
 <!-- Gallery Item 9 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/9bigbend.webp" alt="Gallery Item 9">
     </div>
@@ -106,7 +105,7 @@ Watching a rider along the Rio Grande at Big Bend National Park. The river is a 
   </div>
 
 <!-- Gallery Item 10 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/10rockymountain.webp" alt="Gallery Item 10">
     </div>
@@ -117,7 +116,7 @@ Dream Lake, situated below Hallett Peak in Rocky Mountain National Park. The ste
 
 
 <!-- Gallery Item 11 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/11redrock.webp" alt="Gallery Item 11">
     </div>
@@ -127,7 +126,7 @@ Fountain Formation exposures at Red Rock Canyon, deposited during the Pennsylvan
   </div>
 
 <!-- Gallery Item 12 -->
-  <div class="gallery-block gallery-left">
+  <div class="gallery-block">
     <div class="gallery-img">
       <img src="/images/gallery/12acadia.webp" alt="Gallery Item 12">
     </div>
