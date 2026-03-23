@@ -1,12 +1,11 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title_en                 : "JIA-LE MOU"
-title_cn                 : ""
+title                    : "JIA-LE MOU"
 
-title_separator          : "-"
+title_separator          : "|"
 name                     : &name "Jia-Le Mou"
-description              : &description "Jia-Le Mou's academic portfolio"
+description              : "Jia-Le Mou's academic portfolio"
 url                      : https://Mou-Jia-Le.github.io 
 baseurl                  : "" # the subpath of your site
 repository               : "Mou-Jia-Le/Mou-Jia-Le.github.io"
