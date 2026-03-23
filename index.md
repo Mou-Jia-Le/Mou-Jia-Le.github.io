@@ -1,8 +1,9 @@
 ---
 layout: archive
 title: "CV"
-excerpt: "Jia-Le Mou (牟嘉乐) | Geochemist & Geodynamicist | Rice University, Jia-Le Mou's personal website. Geochemist studying the thermal and chemical evolution of Earth’s interior at Rice University."
 author_profile: true
+description: "Jia-Le Mou (牟嘉乐) | Geochemist & Geodynamicist | Rice University, Jia-Le Mou's personal website. Geochemist studying the thermal and chemical evolution of Earth’s interior at Rice University."
+keywords: "Jia-Le Mou, Rice University, Geochemistry, Petrology, Mantle Dynamics, Earth interior"
 ---
 
 {% include base_path %}
@@ -25,3 +26,10 @@ I am currently seeking postdoctoral positions in geochemistry and geodynamics, w
 
 
 ## [Download CV_Jia-Le Mou](/files/CV_Jia-Le Mou.pdf){:target="_blank"}
+
+
+
+<div style="display: none;">
+  Jia-Le Mou, Rice University Earth Science, Geochemical modeling, 
+  Mantle convection, Early Earth, olivine Forsterite
+</div>
