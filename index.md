@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Mantle geochemistry & dynamics"
+title: "Home"
 author_profile: true
 description: "Jia-Le Mou (牟嘉乐) | Geochemist & Geodynamicist | Rice University, Jia-Le Mou's personal website. Geochemist studying the thermal and chemical evolution of Earth’s interior at Rice University."
 keywords: "Jia-Le Mou, Rice University, Geochemistry, Petrology, Mantle Dynamics, Earth interior"
