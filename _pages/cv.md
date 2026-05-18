@@ -22,9 +22,13 @@ I am currently seeking postdoctoral positions in geochemistry and geodynamics, w
 - **B.S. in Geochemistry**, University of Science and Technology of China, 2022  
 
 ## Publications
-1. Mou, J.-L., Lee, C.-T., & Borchardt, J. (2025). Calibrating olivine forsterite content as a measure of melting degree in residual peridotites. *Geochimica et Cosmochimica Acta*. [https://doi.org/10.1016/j.gca.2025.08.021](https://doi.org/10.1016/j.gca.2025.08.021)  
-2. Mou, J.-L. & Lee, C.-T. A step change in Earth’s thermal history driven by the onset of plate tectonics. *Proceedings of the National Academy of Sciences*, in revision.  
-3. Mou, J.-L., Lee, C.-T., & Zhang, J. Crustal thickness effects on the distribution of heat-producing elements and implications for craton stability. Manuscript in preparation.
+1. **Mou, J.-L.**, Lee, C.-T., & Borchardt, J. (2025). Calibrating olivine forsterite content as a measure of melting degree in residual peridotites. *Geochimica et Cosmochimica Acta*. [https://doi.org/10.1016/j.gca.2025.08.021](https://doi.org/10.1016/j.gca.2025.08.021)  
+2. **Mou, J.-L.** & Lee, C.-T. A step change in Earth’s thermal history driven by the onset of plate tectonics. *Proceedings of the National Academy of Sciences*, in revision.  
+3. **Mou, J.-L.**, Lee, C.-T., & Zhang, J. Crustal thickness effects on the distribution of heat-producing elements and implications for craton stability. Manuscript in preparation.
+4. Lee, C.-T., Zhang, J., Keller, D., Zhang, Y., Ji, D., **Mou, J.-L**, 2026. Extreme magmatic differentiation and silicic magmatism without low melt fractions. Lithos 536–537, 108581. https://doi.org/10.1016/j.lithos.2026.108581
+5. Lee, C.-T., Zhang, Y., Namur, O., **Mou, J.-L.**, Bakhshian, S., Keller, D., Sun, C.  Layered mafic intrusions, magmatic turbidites, and the making of platinum ores. Under review.
+
+
 
 
 ## [Download CV_Jia-Le Mou](/files/CV_Jia-Le Mou.pdf){:target="_blank"}
