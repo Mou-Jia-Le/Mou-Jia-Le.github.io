@@ -358,7 +358,7 @@ p {
 .photo-item {
   position: relative;
   break-inside: avoid;
-  margin: 0 0 .8rem;
+  margin: 0 0;
   border-radius: 0;
   overflow: hidden;
   background: transparent;
@@ -484,7 +484,13 @@ p {
   gap: .8rem;
 }
 
+
 @media (max-width: 820px) {
+  .photo-wall {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+  }
+
   body {
     font-size: 16px;
   }
@@ -493,42 +499,40 @@ p {
   .hero,
   .two-column,
   .research-card,
-  .research-card:nth-child(even),
-  .lightbox-content {
+  .research-card:nth-child(even) {
     grid-template-columns: 1fr;
   }
 
-  .site-nav {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: .9rem 0;
-  }
-
-  .nav-links {
-    justify-content: flex-start;
-  }
-
-  .page-shell {
-    padding-top: 1.8rem;
-  }
-
-  .hero {
-    min-height: auto;
-  }
-
-  .research-card:nth-child(even) .research-image {
-    order: 0;
-  }
-
-  .lightbox {
-    padding: 1rem;
+  .prev-btn,
+  .next-btn {
+    display: none; 
   }
 
   .lightbox-content {
+    grid-template-columns: 1fr;     
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;    
     max-height: 90vh;
   }
 
+  .lightbox-image-container {
+    scroll-snap-align: center;
+    min-width: 100%;
+    height: auto;
+    display: flex;
+  }
+
   .lightbox-caption {
-    max-height: 42%;
+    max-height: 45vh; 
+    order: 2; 
+    overflow-y: auto; 
+    grid-row: auto; 
+  }
+
+  .close-btn {
+    top: 0.5rem;
+    right: 0.75rem;
+    font-size: 1.6rem;
   }
 }
