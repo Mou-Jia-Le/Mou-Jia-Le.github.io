@@ -10,13 +10,10 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
     <p class="eyebrow">Rice University · Earth, Environmental and Planetary Sciences</p>
     <h1 class="hero-title">Jia-Le <span class="given">Mou</span></h1>
     <p class="lead">
-      I am a geochemist, igneous petrologist, and geodynamicist studying the
-      thermal and chemical evolution of Earth's interior.
-    </p>
-    <p>
-      My work integrates geochemical analysis with physical models of mantle and
-      lithospheric processes to understand long-term changes in Earth's tectonic
-      and thermal state.
+            My research sits at the intersection of geochemistry, petrology, and 
+      geodynamics. By coupling geochemical datasets with physical modeling,
+      I investigate the co-evolution of Earth's thermal state and 
+      mantle-lithosphere interaction over geological time.
     </p>
     <div class="notice">
       I am currently seeking postdoctoral positions in geochemistry and
@@ -74,12 +71,22 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
     </article>
     <article class="publication">
       <h3>A step change in Earth's thermal history driven by the onset of plate tectonics</h3>
-      <p>Mou, J.-L. &amp; Lee, C.-T. <em>Proceedings of the National Academy of Sciences</em>, in revision.</p>
+      <p>Mou, J.-L. &amp; Lee, C.-T. Under review.</p>
     </article>
     <article class="publication">
       <h3>Crustal thickness effects on heat-producing elements and craton stability</h3>
       <p>Mou, J.-L., Lee, C.-T., &amp; Zhang, J. Manuscript in preparation.</p>
     </article>
+    <article class="publication">
+      <h3>Extreme magmatic differentiation and silicic magmatism without low melt fractions</h3>
+      <p>Lee, C.-T., Zhang, J., Keller, D., Zhang, Y., Ji, D., Mou, J.-L <em> Lithos</em>, 2026. <a href="https://doi.org/10.1016/j.lithos.2026.108581">DOI</a></p>
+    </article>
+    <article class="publication">
+      <h3>Layered mafic intrusions, magmatic turbidites, and the making of platinum ores</h3>
+      <p>Lee, C.-T., Zhang, Y., Namur, O., Mou, J.-L., Bakhshian, S., Keller, D., Sun, C. Under review.</p>
+    </article>
+
+
   </div>
 </section>
 
