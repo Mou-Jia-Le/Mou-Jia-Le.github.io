@@ -410,6 +410,9 @@ p {
   gap: .8rem; }
 
 @media (max-width: 820px) {
+  .research-card:nth-child(even) .research-image {
+    order: -1; }
+
   .photo-wall {
     grid-template-columns: repeat(3, 1fr);
     gap: 0.4rem; }
