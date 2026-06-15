@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="{{ site.locale | default: 'en-US' | slice: 0, 2 }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title and page.title != "Home" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | strip_html | strip_newlines }}">
+    <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <span class="brand-name">{{ site.name | default: site.title }}</span>
+          <span class="brand-field">Geochemistry · Petrology · Geodynamics</span>
+        </a>
+
+        <div class="nav-links">
+          {% for item in site.data.navigation.main %}
+            <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
+          {% endfor %}
+          <a href="{{ '/files/CV_Jia-Le Mou.pdf' | relative_url }}" target="_blank" rel="noopener">CV</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="content" class="page-shell">
+      {% unless page.hide_title %}
+        <header class="page-heading">
+          <p class="eyebrow">{{ site.author.employer }}</p>
+          <h1>{{ page.title }}</h1>
+        </header>
+      {% endunless %}
+
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>{{ site.name }}</strong>
+        <span>{{ site.author.location }}</span>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:{{ site.author.email }}">Email</a>
+        <a href="{{ site.author.googlescholar }}">Google Scholar</a>
+        <a href="{{ site.author.orcid }}">ORCID</a>
+        <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+      </div>
+    </footer>
+  </body>
+</html>

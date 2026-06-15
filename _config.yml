@@ -1,0 +1,54 @@
+locale: "en-US"
+title: "JIA-LE MOU"
+name: "Jia-Le Mou"
+description: "Jia-Le Mou's academic portfolio"
+url: "https://Mou-Jia-Le.github.io"
+baseurl: ""
+repository: "Mou-Jia-Le/Mou-Jia-Le.github.io"
+
+author:
+  avatar: "profile.png"
+  name: "Jia-Le Mou"
+  bio: "Geochemist, igneous petrologist, and geodynamicist studying Earth's mantle, crustal evolution, and thermal history"
+  location: "Houston, TX"
+  employer: "Rice University"
+  email: "jm163@rice.edu"
+  googlescholar: "https://scholar.google.com/citations?user=YbDFyNYAAAAJ&hl=en"
+  orcid: "https://orcid.org/0009-0001-2709-3580"
+  researchgate: "https://www.researchgate.net/profile/Jiale-Mou"
+  github: "Mou-Jia-Le"
+  linkedin: "jiale-mou-aa77972b1"
+
+include:
+  - _pages
+  - files
+
+exclude:
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - package.json
+  - node_modules
+  - vendor
+  - work
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /:title/
+timezone: America/Chicago
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
