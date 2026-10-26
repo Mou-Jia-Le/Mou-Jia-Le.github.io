@@ -38,10 +38,9 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
   </aside>
 </section>
 
-<section class="section two-column">
+<section class="section two-column home-section">
   <div>
-    <p class="eyebrow">Focus Areas</p>
-    <h2>Research</h2>
+    <h2 class="home-section-title">Research Areas</h2>
   </div>
   <div class="item-list">
     <article class="info-item">
@@ -59,10 +58,9 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
   </div>
 </section>
 
-<section class="section two-column">
+<section class="section two-column home-section">
   <div>
-    <p class="eyebrow">Selected Work</p>
-    <h2>Publications</h2>
+    <h2 class="home-section-title">Selected Publications</h2>
   </div>
   <div>
     <article class="publication">
@@ -90,10 +88,9 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
   </div>
 </section>
 
-<section class="section two-column">
+<section class="section two-column home-section">
   <div>
-    <p class="eyebrow">Education</p>
-    <h2>Training</h2>
+    <h2 class="home-section-title">Education</h2>
   </div>
   <div class="item-list">
     <article class="info-item">
