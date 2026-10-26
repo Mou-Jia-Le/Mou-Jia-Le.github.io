@@ -40,7 +40,7 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
 
 <section class="section two-column home-section">
   <div>
-    <h2 class="home-section-title">Research Areas</h2>
+    <h2 class="home-section-title">Research</h2>
   </div>
   <div class="item-list">
     <article class="info-item">
@@ -60,7 +60,7 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
 
 <section class="section two-column home-section">
   <div>
-    <h2 class="home-section-title">Selected Publications</h2>
+    <h2 class="home-section-title">Publications</h2>
   </div>
   <div>
     <article class="publication">

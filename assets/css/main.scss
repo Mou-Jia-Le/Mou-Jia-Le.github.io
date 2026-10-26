@@ -571,11 +571,18 @@ p {
   color: var(--muted);
 }
 
+.nav-links .language-switch a {
+  padding: .35rem .15rem;
+  text-decoration: none;
+}
+
+.language-switch > span {
+  margin: 0 .05rem;
+}
+
 .language-switch a[aria-current="true"] {
   color: var(--ink);
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: .25em;
 }
 
 .language-switch a:focus-visible {

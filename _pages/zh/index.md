@@ -54,7 +54,7 @@ hide_title: true
 
 <section class="section two-column home-section">
   <div>
-    <h2 class="home-section-title">代表性论文</h2>
+    <h2 class="home-section-title">学术论文</h2>
   </div>
   <div>
     <article class="publication">

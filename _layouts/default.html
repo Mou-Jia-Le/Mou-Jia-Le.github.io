@@ -36,7 +36,7 @@
           <span class="language-switch" role="group" aria-label="Language / 语言">
             <a href="{{ chinese_url | relative_url }}" lang="zh-Hans" hreflang="zh-Hans" {% if is_zh %}aria-current="true"{% endif %}>中文</a>
             <span aria-hidden="true">/</span>
-            <a href="{{ english_url | relative_url }}" lang="en" hreflang="en" {% unless is_zh %}aria-current="true"{% endunless %}>English</a>
+            <a href="{{ english_url | relative_url }}" lang="en" hreflang="en" aria-label="English" {% unless is_zh %}aria-current="true"{% endunless %}>EN</a>
           </span>
         </div>
       </nav>
