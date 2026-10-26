@@ -21,8 +21,8 @@ description: "Research by Jia-Le Mou on mantle melting, crustal heating, and mag
       </p>
       <p>
         By compiling a global xenolith dataset and applying thermodynamic
-        modeling, I reconstruct secular changes in mantle potential temperature.
-        My results reveal a stepwise cooling history with a transition marking
+        modeling, we reconstruct secular changes in mantle potential temperature.
+        Our results reveal a stepwise cooling history with a transition marking
         the onset of modern-style subduction.
       </p>
     </div>
@@ -37,12 +37,12 @@ description: "Research by Jia-Le Mou on mantle melting, crustal heating, and mag
       <h2>Crustal heating and redistribution of radioactive elements</h2>
       <p>
         Earth's crustal thermal structure is strongly influenced by the
-        distribution of heat-producing elements such as uranium, thorium, and
+        distribution of radioactive heat-producing elements such as uranium, thorium, and
         potassium. During crustal differentiation, these elements become
         concentrated in the upper crust while the lower crust becomes depleted.
       </p>
       <p>
-        I combine geochemical datasets with numerical modeling to examine how
+        We combine geochemical datasets with numerical modeling to examine how
         heat-producing element distributions affect crustal thermal gradients,
         melting behavior, lithospheric stability, and long-term craton survival.
       </p>
@@ -62,7 +62,7 @@ description: "Research by Jia-Le Mou on mantle melting, crustal heating, and mag
         their migration remain poorly understood.
       </p>
       <p>
-        I use two-phase flow simulations to examine how sulfide fraction,
+        We use two-phase flow simulations to examine how sulfide fraction,
         crystal framework, and mush compaction influence the focusing and
         transport of sulfide liquids in layered intrusions and komatiitic
         conduits.

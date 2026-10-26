@@ -1,4 +1,7 @@
 ---
+redirect_from:
+  - /cv/
+  - /resume
 layout: default
 title: "Home"
 hide_title: true
@@ -69,11 +72,11 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
     </article>
     <article class="publication">
       <h3>A step change in Earth's thermal history driven by the onset of plate tectonics</h3>
-      <p>Mou, J.-L. &amp; Lee, C.-T. Under review.</p>
+      <p>Mou, J.-L. &amp; Lee, C.-T. <em>Earth and Planetary Science Letters</em>, 2026. <a href="https://doi.org/10.1016/j.epsl.2026.120352">DOI</a></p>
     </article>
     <article class="publication">
       <h3>Crustal thickness effects on heat-producing elements and craton stability</h3>
-      <p>Mou, J.-L., Lee, C.-T., &amp; Zhang, J. Manuscript in preparation.</p>
+      <p>Mou, J.-L., Lee, C.-T., &amp; Zhang, J. Manuscript in internal review.</p>
     </article>
     <article class="publication">
       <h3>Extreme magmatic differentiation and silicic magmatism without low melt fractions</h3>
@@ -81,7 +84,7 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
     </article>
     <article class="publication">
       <h3>Layered mafic intrusions, magmatic turbidites, and the making of platinum ores</h3>
-      <p>Lee, C.-T., Zhang, Y., Namur, O., Mou, J.-L., Bakhshian, S., Keller, D., Sun, C. Under review.</p>
+      <p>Lee, C.-T., Zhang, Y., Namur, O., Mou, J.-L., Bakhshian, S., Keller, D., Sun, C. <em>GSA Today</em>, 2026. In press.</p>
     </article>
 
 
@@ -95,7 +98,7 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
   <div class="item-list">
     <article class="info-item">
       <h3>Ph.D. in Geology</h3>
-      <p>Rice University, 2026 expected</p>
+      <p>Rice University, 2027 expected</p>
     </article>
     <article class="info-item">
       <h3>B.S. in Geochemistry</h3>

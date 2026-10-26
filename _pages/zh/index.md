@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /zh/cv/
 layout: default
 lang: zh-Hans
 title: "首页"
@@ -63,11 +65,11 @@ hide_title: true
     </article>
     <article class="publication">
       <h3>A step change in Earth's thermal history driven by the onset of plate tectonics</h3>
-      <p>Mou, J.-L. &amp; Lee, C.-T. Under review.</p>
+      <p>Mou, J.-L. &amp; Lee, C.-T. <em>Earth and Planetary Science Letters</em>, 2026. <a href="https://doi.org/10.1016/j.epsl.2026.120352">DOI</a></p>
     </article>
     <article class="publication">
-      <h3>Crustal thickness effects on heat-producing elements and craton stability</h3>
-      <p>Mou, J.-L., Lee, C.-T., &amp; Zhang, J. Manuscript in preparation.</p>
+      <h3>The role of crustal thickness on the distribution of heat-producing elements and cratonization</h3>
+      <p>Mou, J.-L., Lee, C.-T., &amp; Zhang, J. Manuscript in internal review.</p>
     </article>
     <article class="publication">
       <h3>Extreme magmatic differentiation and silicic magmatism without low melt fractions</h3>
@@ -75,7 +77,7 @@ hide_title: true
     </article>
     <article class="publication">
       <h3>Layered mafic intrusions, magmatic turbidites, and the making of platinum ores</h3>
-      <p>Lee, C.-T., Zhang, Y., Namur, O., Mou, J.-L., Bakhshian, S., Keller, D., Sun, C. Under review.</p>
+      <p>Lee, C.-T., Zhang, Y., Namur, O., Mou, J.-L., Bakhshian, S., Keller, D., Sun, C. <em>GSA Today</em>, 2026. In press</p>
     </article>
 
 
@@ -89,7 +91,7 @@ hide_title: true
   <div class="item-list">
     <article class="info-item">
       <h3>地质学博士</h3>
-      <p>莱斯大学，预计 2026 年毕业</p>
+      <p>莱斯大学，预计 2027 年毕业</p>
     </article>
     <article class="info-item">
       <h3>地球化学学士</h3>
