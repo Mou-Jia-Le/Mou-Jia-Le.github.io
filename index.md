@@ -8,7 +8,7 @@ description: "Jia-Le Mou is a geochemist, igneous petrologist, and geodynamicist
 <section class="hero">
   <div class="hero-copy">
     <p class="eyebrow">Rice University · Earth, Environmental and Planetary Sciences</p>
-    <h1 class="hero-title">Jia-Le <span class="given">Mou</span></h1>
+    <h1 class="hero-title"><span class="english-name">Jia-Le <span class="given">Mou</span></span><span class="chinese-name" lang="zh-Hans">牟嘉乐</span></h1>
     <p class="lead">
             My research sits at the intersection of geochemistry, petrology, and 
       geodynamics. By coupling geochemical datasets with physical modeling,
