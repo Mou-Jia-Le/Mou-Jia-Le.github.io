@@ -28,7 +28,7 @@ description: "CV and publication list for Jia-Le Mou."
     <p class="eyebrow">Education</p>
     <h2>Education</h2>
     <ul>
-      <li><strong>Ph.D. in Geology</strong>, Rice University, 2026 expected</li>
+      <li><strong>Ph.D. in Geology</strong>, Rice University, 2027 expected</li>
       <li><strong>B.S. in Geochemistry</strong>, University of Science and Technology of China, 2022</li>
     </ul>
   </section>
@@ -38,10 +38,10 @@ description: "CV and publication list for Jia-Le Mou."
     <h2>Publications</h2>
     <ol>
       <li><strong>Mou, J.-L.</strong>, Lee, C.-T., &amp; Borchardt, J. (2025). Calibrating olivine forsterite content as a measure of melting degree in residual peridotites. <em>Geochimica et Cosmochimica Acta</em>. <a href="https://doi.org/10.1016/j.gca.2025.08.021">https://doi.org/10.1016/j.gca.2025.08.021</a></li>
-      <li><strong>Mou, J.-L.</strong> &amp; Lee, C.-T. A step change in Earth's thermal history driven by the onset of plate tectonics. <em>Proceedings of the National Academy of Sciences</em>, in revision.</li>
-      <li><strong>Mou, J.-L.</strong>, Lee, C.-T., &amp; Zhang, J. Crustal thickness effects on the distribution of heat-producing elements and implications for craton stability. Manuscript in preparation.</li>
+      <li><strong>Mou, J.-L.</strong> &amp; Lee, C.-T. (2026). A step change in Earth's thermal history driven by the onset of plate tectonics. <em>Earth and Planetary Science Letters</em>. <a href="https://doi.org/10.1016/j.epsl.2026.120352">https://doi.org/10.1016/j.epsl.2026.120352</a></li>
+      <li><strong>Mou, J.-L.</strong>, Lee, C.-T., &amp; Zhang, J. The role of crustal thickness on the distribution of heat-producing elements and cratonization. In internal review</li>
       <li>Lee, C.-T., Zhang, J., Keller, D., Zhang, Y., Ji, D., <strong>Mou, J.-L.</strong> (2026). Extreme magmatic differentiation and silicic magmatism without low melt fractions. <em>Lithos</em> 536-537, 108581. <a href="https://doi.org/10.1016/j.lithos.2026.108581">https://doi.org/10.1016/j.lithos.2026.108581</a></li>
-      <li>Lee, C.-T., Zhang, Y., Namur, O., <strong>Mou, J.-L.</strong>, Bakhshian, S., Keller, D., &amp; Sun, C. Layered mafic intrusions, magmatic turbidites, and the making of platinum ores. Under review.</li>
+      <li>Lee, C.-T., Zhang, Y., Namur, O., <strong>Mou, J.-L.</strong>, Bakhshian, S., Keller, D., &amp; Sun, C. Layered mafic intrusions, magmatic turbidites, and the making of platinum ores. <em>GSA Today</em>. In press.</li>
     </ol>
   </section>
 </div>
